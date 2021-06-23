@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlogDetailCollectionViewCell" id="gTV-IL-0wX" customClass="BlogDetailCollectionViewCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="285" height="177"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8t-HR-CtN" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="6" y="5" width="273" height="160"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Njg-IB-8J3">
+                                <rect key="frame" x="0.0" y="0.0" width="273" height="160"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Njg-IB-8J3" secondAttribute="trailing" id="AsC-xS-Wny"/>
+                            <constraint firstAttribute="bottom" secondItem="Njg-IB-8J3" secondAttribute="bottom" id="FeE-a2-kFq"/>
+                            <constraint firstItem="Njg-IB-8J3" firstAttribute="leading" secondItem="c8t-HR-CtN" secondAttribute="leading" id="QJa-nH-Avk"/>
+                            <constraint firstItem="Njg-IB-8J3" firstAttribute="top" secondItem="c8t-HR-CtN" secondAttribute="top" id="TnX-DL-g6q"/>
+                            <constraint firstAttribute="height" constant="160" id="jEO-uN-ctw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.98823529409999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="imageShadowColor">
+                                <color key="value" name="CellShadowColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowOpacity">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="c8t-HR-CtN" secondAttribute="trailing" constant="6" id="4uW-FF-76F"/>
+                <constraint firstAttribute="bottom" secondItem="c8t-HR-CtN" secondAttribute="bottom" constant="8" id="SH3-5j-3cx"/>
+                <constraint firstItem="c8t-HR-CtN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="gNi-Lb-9ZO"/>
+                <constraint firstItem="c8t-HR-CtN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="lDM-VO-gjq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="285" height="180"/>
+            <connections>
+                <outlet property="imgWedding" destination="Njg-IB-8J3" id="Dz3-dj-WMg"/>
+            </connections>
+            <point key="canvasLocation" x="196.37681159420291" y="87.388392857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="4" width="259" height="194"/>
+        <namedColor name="CellShadowColor">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

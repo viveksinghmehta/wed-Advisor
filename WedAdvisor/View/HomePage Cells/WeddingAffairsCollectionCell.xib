@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeddingAffairsCollectionCell" id="gTV-IL-0wX" customClass="WeddingAffairsCollectionCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="360"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="360"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUA-wz-Yda" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="301" height="340"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-hT-R83">
+                                <rect key="frame" x="10" y="318" width="59.5" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Jd8-cN-Ye5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" name="AppButtonBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Delhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltc-g8-9jS">
+                                <rect key="frame" x="10" y="297" width="61.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Kdi-YO-hQo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Royal Wedding Affairs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-UX-8j1">
+                                <rect key="frame" x="10" y="275" width="286" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="jn5-uD-aV7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-zI-Twf" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="265"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="4"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xig-UX-8j1" firstAttribute="top" secondItem="B7d-zI-Twf" secondAttribute="bottom" constant="10" id="Mq6-90-C0T"/>
+                            <constraint firstAttribute="trailing" secondItem="B7d-zI-Twf" secondAttribute="trailing" id="NHl-0N-XKo"/>
+                            <constraint firstItem="B7d-zI-Twf" firstAttribute="top" secondItem="gUA-wz-Yda" secondAttribute="top" id="Nk1-52-gm5"/>
+                            <constraint firstItem="Ltc-g8-9jS" firstAttribute="leading" secondItem="gUA-wz-Yda" secondAttribute="leading" constant="10" id="P5J-pI-WVN"/>
+                            <constraint firstAttribute="bottom" secondItem="7Lx-hT-R83" secondAttribute="bottom" constant="10" id="W0Z-lY-29M"/>
+                            <constraint firstItem="Xig-UX-8j1" firstAttribute="leading" secondItem="gUA-wz-Yda" secondAttribute="leading" constant="10" id="Y61-Tv-N7P"/>
+                            <constraint firstItem="7Lx-hT-R83" firstAttribute="leading" secondItem="gUA-wz-Yda" secondAttribute="leading" constant="10" id="aYv-35-2pg"/>
+                            <constraint firstItem="B7d-zI-Twf" firstAttribute="leading" secondItem="gUA-wz-Yda" secondAttribute="leading" id="dOW-TF-OsR"/>
+                            <constraint firstItem="Ltc-g8-9jS" firstAttribute="top" secondItem="Xig-UX-8j1" secondAttribute="bottom" constant="5" id="hbt-qT-7MG"/>
+                            <constraint firstAttribute="trailing" secondItem="Xig-UX-8j1" secondAttribute="trailing" constant="5" id="mXs-5v-jOc"/>
+                            <constraint firstItem="7Lx-hT-R83" firstAttribute="top" secondItem="Ltc-g8-9jS" secondAttribute="bottom" constant="5" id="rpr-mA-1T2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="imageShadowColor">
+                                <color key="value" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowOpacity">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gUA-wz-Yda" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KuG-37-e7d"/>
+                <constraint firstAttribute="bottom" secondItem="gUA-wz-Yda" secondAttribute="bottom" constant="10" id="LwQ-81-gRK"/>
+                <constraint firstAttribute="trailing" secondItem="gUA-wz-Yda" secondAttribute="trailing" constant="10" id="rsT-MY-ppV"/>
+                <constraint firstItem="gUA-wz-Yda" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wBI-J6-1gc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="321" height="360"/>
+            <connections>
+                <outlet property="imgImage" destination="B7d-zI-Twf" id="p9Q-aE-QwB"/>
+                <outlet property="lblCity" destination="Ltc-g8-9jS" id="DoN-1e-Ptb"/>
+                <outlet property="lblName" destination="Xig-UX-8j1" id="c0Z-3a-IOJ"/>
+                <outlet property="lblRequest" destination="7Lx-hT-R83" id="ee2-pz-7jG"/>
+            </connections>
+            <point key="canvasLocation" x="326.81159420289856" y="216.96428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="4" width="259" height="194"/>
+        <namedColor name="AppButtonBackgroundColor">
+            <color red="0.10199999809265137" green="0.63899999856948853" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

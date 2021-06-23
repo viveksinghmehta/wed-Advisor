@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeatingTableCell" rowHeight="253" id="KGk-i7-Jjw" customClass="SeatingTableCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="253"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svH-vt-LUp" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="15" y="5" width="289" height="243"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-yV-wW4" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                <rect key="frame" x="3" y="3" width="283" height="237"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-C1-IOc">
+                                        <rect key="frame" x="8" y="8" width="267" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Table A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-4V-Tj9">
+                                                <rect key="frame" x="2" y="4" width="114.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ge-Sug">
+                                                <rect key="frame" x="0.0" y="34" width="267" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="L9a-Hb-76c"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7RU-Te-g1N"/>
+                                            <constraint firstItem="fNc-4V-Tj9" firstAttribute="top" secondItem="4Bx-C1-IOc" secondAttribute="top" constant="4" id="Rgy-5H-Qx6"/>
+                                            <constraint firstItem="yTQ-Ge-Sug" firstAttribute="leading" secondItem="4Bx-C1-IOc" secondAttribute="leading" id="gvI-HO-ipU"/>
+                                            <constraint firstItem="fNc-4V-Tj9" firstAttribute="leading" secondItem="4Bx-C1-IOc" secondAttribute="leading" constant="2" id="h3D-nZ-2KG"/>
+                                            <constraint firstAttribute="bottom" secondItem="yTQ-Ge-Sug" secondAttribute="bottom" id="ouj-j9-hOF"/>
+                                            <constraint firstAttribute="trailing" secondItem="yTQ-Ge-Sug" secondAttribute="trailing" id="rFb-0X-Eam"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KMw-DO-kgw">
+                                        <rect key="frame" x="1" y="48" width="281" height="184"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="072-so-nVa">
+                                                <rect key="frame" x="0.0" y="0.0" width="281" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AA1-wa-bZu">
+                                                        <rect key="frame" x="8" y="7.5" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="li0-Rh-Y1R" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4.5" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PZ-bs-jKH">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="42" id="3dZ-4N-F43"/>
+                                                            <constraint firstAttribute="height" constant="22" id="3yf-c3-0FG"/>
+                                                            <constraint firstItem="2PZ-bs-jKH" firstAttribute="top" secondItem="li0-Rh-Y1R" secondAttribute="top" constant="1" id="IWN-Ir-tHh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="2PZ-bs-jKH" secondAttribute="trailing" constant="1" id="REV-FG-8e5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="2PZ-bs-jKH" secondAttribute="bottom" constant="1" id="eSd-nx-S1F"/>
+                                                            <constraint firstItem="2PZ-bs-jKH" firstAttribute="leading" secondItem="li0-Rh-Y1R" secondAttribute="leading" constant="1" id="qRv-kY-r6l"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sk9-om-lhS" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4.5" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-Jh-T5r">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="gfl-Jh-T5r" secondAttribute="trailing" constant="1" id="5GQ-uU-7OB"/>
+                                                            <constraint firstItem="gfl-Jh-T5r" firstAttribute="leading" secondItem="sk9-om-lhS" secondAttribute="leading" constant="1" id="8jv-eX-H0Q"/>
+                                                            <constraint firstAttribute="width" constant="50" id="GHP-Yg-xzq"/>
+                                                            <constraint firstItem="gfl-Jh-T5r" firstAttribute="top" secondItem="sk9-om-lhS" secondAttribute="top" id="Zhu-WB-Vmf"/>
+                                                            <constraint firstAttribute="height" constant="22" id="ZuD-zY-JeK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gfl-Jh-T5r" secondAttribute="bottom" constant="1" id="biI-Jm-Ca4"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.72156862749999995" green="0.41960784309999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="sk9-om-lhS" firstAttribute="centerY" secondItem="072-so-nVa" secondAttribute="centerY" id="8fX-Ak-1Nu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sk9-om-lhS" secondAttribute="trailing" constant="8" id="AYM-Ob-thJ"/>
+                                                    <constraint firstItem="sk9-om-lhS" firstAttribute="leading" secondItem="li0-Rh-Y1R" secondAttribute="trailing" constant="7" id="FQH-dA-3dp"/>
+                                                    <constraint firstItem="AA1-wa-bZu" firstAttribute="leading" secondItem="072-so-nVa" secondAttribute="leading" constant="8" id="Obf-5g-j40"/>
+                                                    <constraint firstItem="li0-Rh-Y1R" firstAttribute="centerY" secondItem="072-so-nVa" secondAttribute="centerY" id="nS2-Wb-PW2"/>
+                                                    <constraint firstItem="AA1-wa-bZu" firstAttribute="centerY" secondItem="072-so-nVa" secondAttribute="centerY" id="rht-H2-IKe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umO-8g-mEf">
+                                                <rect key="frame" x="0.0" y="30.5" width="281" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53d-QE-7e6">
+                                                        <rect key="frame" x="8" y="7.5" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTZ-k9-tV9" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4.5" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU5-uU-Oc4">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="42" id="EK8-eB-bFR"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gU5-uU-Oc4" secondAttribute="bottom" constant="1" id="MAE-Hq-rjo"/>
+                                                            <constraint firstAttribute="height" constant="22" id="U4n-6K-aQf"/>
+                                                            <constraint firstItem="gU5-uU-Oc4" firstAttribute="top" secondItem="LTZ-k9-tV9" secondAttribute="top" constant="1" id="Y7z-CK-ufG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gU5-uU-Oc4" secondAttribute="trailing" constant="1" id="goj-bn-4GD"/>
+                                                            <constraint firstItem="gU5-uU-Oc4" firstAttribute="leading" secondItem="LTZ-k9-tV9" secondAttribute="leading" constant="1" id="mUM-y7-Tjg"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioH-l7-7om" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4.5" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-FT-FYc">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="vRs-FT-FYc" firstAttribute="leading" secondItem="ioH-l7-7om" secondAttribute="leading" constant="1" id="FKm-Kf-Pcz"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vRs-FT-FYc" secondAttribute="bottom" constant="1" id="KLC-bG-7YS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vRs-FT-FYc" secondAttribute="trailing" constant="1" id="Kbn-HH-VAg"/>
+                                                            <constraint firstAttribute="height" constant="22" id="YQY-sC-Hh5"/>
+                                                            <constraint firstAttribute="width" constant="50" id="aC8-z0-hNi"/>
+                                                            <constraint firstItem="vRs-FT-FYc" firstAttribute="top" secondItem="ioH-l7-7om" secondAttribute="top" id="dHN-3e-9Az"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ioH-l7-7om" firstAttribute="centerY" secondItem="umO-8g-mEf" secondAttribute="centerY" id="CZN-iy-UIG"/>
+                                                    <constraint firstItem="53d-QE-7e6" firstAttribute="leading" secondItem="umO-8g-mEf" secondAttribute="leading" constant="8" id="Fcu-Mu-zPN"/>
+                                                    <constraint firstItem="LTZ-k9-tV9" firstAttribute="centerY" secondItem="umO-8g-mEf" secondAttribute="centerY" id="tZB-EO-E4p"/>
+                                                    <constraint firstItem="53d-QE-7e6" firstAttribute="centerY" secondItem="umO-8g-mEf" secondAttribute="centerY" id="wZk-xZ-Blw"/>
+                                                    <constraint firstItem="ioH-l7-7om" firstAttribute="leading" secondItem="LTZ-k9-tV9" secondAttribute="trailing" constant="7" id="wv5-I1-jLD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ioH-l7-7om" secondAttribute="trailing" constant="8" id="x7Z-Mb-896"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqG-Ru-eBc">
+                                                <rect key="frame" x="0.0" y="61.5" width="281" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCK-Uu-LfE">
+                                                        <rect key="frame" x="8" y="7" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-TZ-SgP" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFo-ax-X3X">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="KFo-ax-X3X" firstAttribute="top" secondItem="sEd-TZ-SgP" secondAttribute="top" constant="1" id="CiD-wj-plY"/>
+                                                            <constraint firstAttribute="trailing" secondItem="KFo-ax-X3X" secondAttribute="trailing" constant="1" id="N3U-vf-65j"/>
+                                                            <constraint firstAttribute="bottom" secondItem="KFo-ax-X3X" secondAttribute="bottom" constant="1" id="b2I-bm-zT4"/>
+                                                            <constraint firstItem="KFo-ax-X3X" firstAttribute="leading" secondItem="sEd-TZ-SgP" secondAttribute="leading" constant="1" id="jhV-Ty-slf"/>
+                                                            <constraint firstAttribute="width" constant="42" id="pUP-RL-SB5"/>
+                                                            <constraint firstAttribute="height" constant="22" id="txx-cI-A6v"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-GV-nRj" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOo-4n-eLF">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="M5A-Lh-JAN"/>
+                                                            <constraint firstItem="JOo-4n-eLF" firstAttribute="leading" secondItem="m1L-GV-nRj" secondAttribute="leading" constant="1" id="MG1-Gv-NJA"/>
+                                                            <constraint firstAttribute="height" constant="22" id="MSz-yL-zAP"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JOo-4n-eLF" secondAttribute="bottom" constant="1" id="gph-IQ-nqA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JOo-4n-eLF" secondAttribute="trailing" constant="1" id="hfO-Gz-70W"/>
+                                                            <constraint firstItem="JOo-4n-eLF" firstAttribute="top" secondItem="m1L-GV-nRj" secondAttribute="top" id="jUt-iW-Dyv"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.72156862749999995" green="0.41960784309999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="m1L-GV-nRj" firstAttribute="leading" secondItem="sEd-TZ-SgP" secondAttribute="trailing" constant="7" id="7Vn-1N-NJV"/>
+                                                    <constraint firstItem="m1L-GV-nRj" firstAttribute="centerY" secondItem="KqG-Ru-eBc" secondAttribute="centerY" id="MBz-l4-Umj"/>
+                                                    <constraint firstItem="CCK-Uu-LfE" firstAttribute="centerY" secondItem="KqG-Ru-eBc" secondAttribute="centerY" id="P2I-cV-7g9"/>
+                                                    <constraint firstItem="sEd-TZ-SgP" firstAttribute="centerY" secondItem="KqG-Ru-eBc" secondAttribute="centerY" id="Zhb-Lw-2KD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="m1L-GV-nRj" secondAttribute="trailing" constant="8" id="iFF-jp-nDl"/>
+                                                    <constraint firstItem="CCK-Uu-LfE" firstAttribute="leading" secondItem="KqG-Ru-eBc" secondAttribute="leading" constant="8" id="y4q-ZJ-6pA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-68-RQ7">
+                                                <rect key="frame" x="0.0" y="92" width="281" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7y-bQ-DYF">
+                                                        <rect key="frame" x="8" y="7.5" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLj-ep-1bS" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4.5" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-7u-Ucj">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="VMX-7u-Ucj" secondAttribute="trailing" constant="1" id="ADw-cp-66V"/>
+                                                            <constraint firstItem="VMX-7u-Ucj" firstAttribute="leading" secondItem="TLj-ep-1bS" secondAttribute="leading" constant="1" id="H5h-GW-50w"/>
+                                                            <constraint firstAttribute="bottom" secondItem="VMX-7u-Ucj" secondAttribute="bottom" constant="1" id="OFm-Dv-P9c"/>
+                                                            <constraint firstItem="VMX-7u-Ucj" firstAttribute="top" secondItem="TLj-ep-1bS" secondAttribute="top" constant="1" id="ny3-xO-Fjd"/>
+                                                            <constraint firstAttribute="width" constant="42" id="qAb-WV-WJQ"/>
+                                                            <constraint firstAttribute="height" constant="22" id="wXR-8d-RSg"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-6C-BW6" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4.5" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-mx-w7C">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="f7c-mx-w7C" secondAttribute="bottom" constant="1" id="6Ec-Cg-D0k"/>
+                                                            <constraint firstItem="f7c-mx-w7C" firstAttribute="top" secondItem="r5z-6C-BW6" secondAttribute="top" id="8ON-YS-t2T"/>
+                                                            <constraint firstItem="f7c-mx-w7C" firstAttribute="leading" secondItem="r5z-6C-BW6" secondAttribute="leading" constant="1" id="DnE-y6-UZW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="f7c-mx-w7C" secondAttribute="trailing" constant="1" id="Tiw-pL-eib"/>
+                                                            <constraint firstAttribute="width" constant="50" id="hYQ-Db-pcc"/>
+                                                            <constraint firstAttribute="height" constant="22" id="mL2-tA-RUG"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="r5z-6C-BW6" firstAttribute="leading" secondItem="TLj-ep-1bS" secondAttribute="trailing" constant="7" id="CXm-jl-d0H"/>
+                                                    <constraint firstItem="r5z-6C-BW6" firstAttribute="centerY" secondItem="9nw-68-RQ7" secondAttribute="centerY" id="P9n-ba-SFj"/>
+                                                    <constraint firstItem="TLj-ep-1bS" firstAttribute="centerY" secondItem="9nw-68-RQ7" secondAttribute="centerY" id="Re5-WF-Aaw"/>
+                                                    <constraint firstItem="J7y-bQ-DYF" firstAttribute="centerY" secondItem="9nw-68-RQ7" secondAttribute="centerY" id="X7f-Zy-aXU"/>
+                                                    <constraint firstItem="J7y-bQ-DYF" firstAttribute="leading" secondItem="9nw-68-RQ7" secondAttribute="leading" constant="8" id="ftg-ol-AqR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="r5z-6C-BW6" secondAttribute="trailing" constant="8" id="ziT-2D-FI1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-CY-gJi">
+                                                <rect key="frame" x="0.0" y="122.5" width="281" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-Bg-8LS">
+                                                        <rect key="frame" x="8" y="7.5" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjC-F2-VAe" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4.5" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQW-Jg-cpj">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="BJe-ok-bch"/>
+                                                            <constraint firstAttribute="bottom" secondItem="rQW-Jg-cpj" secondAttribute="bottom" constant="1" id="OFS-YK-Wxv"/>
+                                                            <constraint firstAttribute="trailing" secondItem="rQW-Jg-cpj" secondAttribute="trailing" constant="1" id="Oh4-2x-nxW"/>
+                                                            <constraint firstItem="rQW-Jg-cpj" firstAttribute="leading" secondItem="WjC-F2-VAe" secondAttribute="leading" constant="1" id="a6V-Tn-BvK"/>
+                                                            <constraint firstItem="rQW-Jg-cpj" firstAttribute="top" secondItem="WjC-F2-VAe" secondAttribute="top" constant="1" id="lpu-Wg-dvq"/>
+                                                            <constraint firstAttribute="width" constant="42" id="zi3-Zc-FDM"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB5-aA-bap" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4.5" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-RU-hza">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="6qC-gi-Ffc"/>
+                                                            <constraint firstAttribute="height" constant="22" id="I2T-X1-aoS"/>
+                                                            <constraint firstAttribute="bottom" secondItem="9GG-RU-hza" secondAttribute="bottom" constant="1" id="Nad-bC-mU2"/>
+                                                            <constraint firstItem="9GG-RU-hza" firstAttribute="top" secondItem="QB5-aA-bap" secondAttribute="top" id="UUI-En-uWe"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9GG-RU-hza" secondAttribute="trailing" constant="1" id="lap-CT-X14"/>
+                                                            <constraint firstItem="9GG-RU-hza" firstAttribute="leading" secondItem="QB5-aA-bap" secondAttribute="leading" constant="1" id="toW-0p-m5c"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.72156862749999995" green="0.41960784309999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="WjC-F2-VAe" firstAttribute="centerY" secondItem="Lhy-CY-gJi" secondAttribute="centerY" id="3Wg-qx-RRi"/>
+                                                    <constraint firstItem="BVr-Bg-8LS" firstAttribute="centerY" secondItem="Lhy-CY-gJi" secondAttribute="centerY" id="HI9-pj-I6A"/>
+                                                    <constraint firstItem="QB5-aA-bap" firstAttribute="centerY" secondItem="Lhy-CY-gJi" secondAttribute="centerY" id="QSp-Ep-3cG"/>
+                                                    <constraint firstItem="BVr-Bg-8LS" firstAttribute="leading" secondItem="Lhy-CY-gJi" secondAttribute="leading" constant="8" id="UeA-Rz-1Ae"/>
+                                                    <constraint firstItem="QB5-aA-bap" firstAttribute="leading" secondItem="WjC-F2-VAe" secondAttribute="trailing" constant="7" id="h5j-6s-fsb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QB5-aA-bap" secondAttribute="trailing" constant="8" id="lzC-bg-CHp"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHi-cj-EnM">
+                                                <rect key="frame" x="0.0" y="153.5" width="281" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2J-vm-6jI">
+                                                        <rect key="frame" x="8" y="7" width="56" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-2m-qvJ" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="174" y="4" width="42" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbN-3T-6fX">
+                                                                <rect key="frame" x="1" y="1" width="40" height="20"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Edit">
+                                                                    <color key="titleColor" name="AppButtonBackgroundColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="42" id="4KU-ZE-vFa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QbN-3T-6fX" secondAttribute="bottom" constant="1" id="71T-Bb-bNz"/>
+                                                            <constraint firstItem="QbN-3T-6fX" firstAttribute="top" secondItem="NaQ-2m-qvJ" secondAttribute="top" constant="1" id="Zvu-pA-3ww"/>
+                                                            <constraint firstAttribute="height" constant="22" id="e1Q-6C-EEG"/>
+                                                            <constraint firstItem="QbN-3T-6fX" firstAttribute="leading" secondItem="NaQ-2m-qvJ" secondAttribute="leading" constant="1" id="jMs-mQ-x7Y"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QbN-3T-6fX" secondAttribute="trailing" constant="1" id="rmT-nA-S7v"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppButtonBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lb-ra-kx7" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                                                        <rect key="frame" x="223" y="4" width="50" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ym-fX-kmT">
+                                                                <rect key="frame" x="1" y="0.0" width="48" height="21"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" name="AppLightOrangeColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="Ap7-Pd-cLt"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0Ym-fX-kmT" secondAttribute="trailing" constant="1" id="DRe-2K-z1b"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0Ym-fX-kmT" secondAttribute="bottom" constant="1" id="HGa-gy-UPa"/>
+                                                            <constraint firstItem="0Ym-fX-kmT" firstAttribute="leading" secondItem="3Lb-ra-kx7" secondAttribute="leading" constant="1" id="bKF-JO-SBI"/>
+                                                            <constraint firstAttribute="height" constant="22" id="d6G-JQ-wI0"/>
+                                                            <constraint firstItem="0Ym-fX-kmT" firstAttribute="top" secondItem="3Lb-ra-kx7" secondAttribute="top" id="hN7-YZ-JQE"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="AppLightOrangeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="t2J-vm-6jI" firstAttribute="centerY" secondItem="kHi-cj-EnM" secondAttribute="centerY" id="8ko-Kh-ggr"/>
+                                                    <constraint firstItem="NaQ-2m-qvJ" firstAttribute="centerY" secondItem="kHi-cj-EnM" secondAttribute="centerY" id="Sds-gp-AV7"/>
+                                                    <constraint firstItem="3Lb-ra-kx7" firstAttribute="leading" secondItem="NaQ-2m-qvJ" secondAttribute="trailing" constant="7" id="cgO-Ty-2Wg"/>
+                                                    <constraint firstItem="3Lb-ra-kx7" firstAttribute="centerY" secondItem="kHi-cj-EnM" secondAttribute="centerY" id="ozq-E8-1JZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3Lb-ra-kx7" secondAttribute="trailing" constant="8" id="uc1-YA-uUZ"/>
+                                                    <constraint firstItem="t2J-vm-6jI" firstAttribute="leading" secondItem="kHi-cj-EnM" secondAttribute="leading" constant="8" id="zZi-XM-c7f"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.41960784309999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Bx-C1-IOc" secondAttribute="trailing" constant="8" id="0e5-bp-61X"/>
+                                    <constraint firstItem="KMw-DO-kgw" firstAttribute="top" secondItem="4Bx-C1-IOc" secondAttribute="bottom" constant="5" id="58N-uA-UTN"/>
+                                    <constraint firstItem="4Bx-C1-IOc" firstAttribute="leading" secondItem="MdN-yV-wW4" secondAttribute="leading" constant="8" id="Fty-eZ-IZa"/>
+                                    <constraint firstAttribute="trailing" secondItem="KMw-DO-kgw" secondAttribute="trailing" constant="1" id="RLp-gL-vtR"/>
+                                    <constraint firstAttribute="bottom" secondItem="KMw-DO-kgw" secondAttribute="bottom" constant="5" id="VXa-QN-rTO"/>
+                                    <constraint firstItem="KMw-DO-kgw" firstAttribute="leading" secondItem="MdN-yV-wW4" secondAttribute="leading" constant="1" id="uc5-2O-FB0"/>
+                                    <constraint firstItem="4Bx-C1-IOc" firstAttribute="top" secondItem="MdN-yV-wW4" secondAttribute="top" constant="8" id="xq7-j2-fOL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageShadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageShadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageShadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MdN-yV-wW4" firstAttribute="top" secondItem="svH-vt-LUp" secondAttribute="top" constant="3" id="8G8-VK-kcS"/>
+                            <constraint firstItem="MdN-yV-wW4" firstAttribute="leading" secondItem="svH-vt-LUp" secondAttribute="leading" constant="3" id="Hcm-U8-Mqb"/>
+                            <constraint firstAttribute="bottom" secondItem="MdN-yV-wW4" secondAttribute="bottom" constant="3" id="XL7-Df-p15"/>
+                            <constraint firstAttribute="trailing" secondItem="MdN-yV-wW4" secondAttribute="trailing" constant="3" id="uTG-yk-37n"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="imageShadowColor">
+                                <color key="value" name="CellShadowColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowOpacity">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="TableCellBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="svH-vt-LUp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4bh-0u-odd"/>
+                    <constraint firstAttribute="bottom" secondItem="svH-vt-LUp" secondAttribute="bottom" constant="5" id="EtS-yc-9or"/>
+                    <constraint firstItem="svH-vt-LUp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SfZ-Sx-vTs"/>
+                    <constraint firstAttribute="trailing" secondItem="svH-vt-LUp" secondAttribute="trailing" constant="15" id="z25-Z7-Tay"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="MdN-yV-wW4" id="3zg-ap-4HR"/>
+                <outlet property="btnEdit" destination="2PZ-bs-jKH" id="B9q-17-8XU"/>
+            </connections>
+            <point key="canvasLocation" x="153" y="229"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppButtonBackgroundColor">
+            <color red="0.10199999809265137" green="0.63899999856948853" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightOrangeColor">
+            <color red="1" green="0.6940000057220459" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellShadowColor">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableCellBackgroundColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

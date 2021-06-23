@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "51542_Mumbai_India_Gateway to India-iStock_000004086989Small.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

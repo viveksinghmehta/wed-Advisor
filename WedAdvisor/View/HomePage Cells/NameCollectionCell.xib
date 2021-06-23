@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NameCollectionCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="235"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="235"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBP-dY-5JD">
+                        <rect key="frame" x="10" y="10" width="367" height="160"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khr-8H-eqN">
+                                <rect key="frame" x="0.0" y="0.0" width="367" height="160"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Apj-a4-Le3" customClass="EZYGradientView" customModule="EZYGradientView">
+                                <rect key="frame" x="0.0" y="0.0" width="367" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹50,000 Per Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nJ-1X-eWe">
+                                        <rect key="frame" x="125.5" y="134" width="116" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="AppButtonBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Delhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNG-DB-DPv">
+                                        <rect key="frame" x="149" y="116" width="69.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stories by Bhuwan Gupta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz4-bt-hOA">
+                                        <rect key="frame" x="87" y="95.5" width="193" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JNG-DB-DPv" firstAttribute="top" secondItem="iz4-bt-hOA" secondAttribute="bottom" id="DiF-sT-ffA"/>
+                                    <constraint firstItem="JNG-DB-DPv" firstAttribute="centerX" secondItem="Apj-a4-Le3" secondAttribute="centerX" id="IZQ-WK-vpr"/>
+                                    <constraint firstItem="7nJ-1X-eWe" firstAttribute="top" secondItem="JNG-DB-DPv" secondAttribute="bottom" id="JEV-Uk-QvZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7nJ-1X-eWe" secondAttribute="bottom" constant="8" id="Wl8-76-gBh"/>
+                                    <constraint firstItem="iz4-bt-hOA" firstAttribute="centerX" secondItem="Apj-a4-Le3" secondAttribute="centerX" id="XXB-7m-2H6"/>
+                                    <constraint firstItem="7nJ-1X-eWe" firstAttribute="centerX" secondItem="Apj-a4-Le3" secondAttribute="centerX" id="pWw-nw-mvf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angleº">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor(10)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVy-vc-7vj">
+                                <rect key="frame" x="10" y="132" width="78.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Uba-ll-sVx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mumbai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADZ-5K-llu">
+                                <rect key="frame" x="10" y="104" width="71.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Khr-8H-eqN" firstAttribute="leading" secondItem="zBP-dY-5JD" secondAttribute="leading" id="5Vd-zx-L30"/>
+                            <constraint firstAttribute="bottom" secondItem="Khr-8H-eqN" secondAttribute="bottom" id="61I-Iy-U3b"/>
+                            <constraint firstAttribute="height" constant="160" id="6vm-x1-rvq"/>
+                            <constraint firstItem="lVy-vc-7vj" firstAttribute="top" secondItem="ADZ-5K-llu" secondAttribute="bottom" constant="5" id="7Hj-5o-lSy"/>
+                            <constraint firstAttribute="bottom" secondItem="lVy-vc-7vj" secondAttribute="bottom" constant="10" id="8mJ-dz-l4Q"/>
+                            <constraint firstItem="Khr-8H-eqN" firstAttribute="top" secondItem="zBP-dY-5JD" secondAttribute="top" id="IIg-iI-a8c"/>
+                            <constraint firstAttribute="trailing" secondItem="Apj-a4-Le3" secondAttribute="trailing" id="T06-3M-mwF"/>
+                            <constraint firstAttribute="trailing" secondItem="Khr-8H-eqN" secondAttribute="trailing" id="W8f-gT-sTe"/>
+                            <constraint firstItem="Apj-a4-Le3" firstAttribute="top" secondItem="zBP-dY-5JD" secondAttribute="top" id="W9q-t9-6EF"/>
+                            <constraint firstItem="Apj-a4-Le3" firstAttribute="leading" secondItem="zBP-dY-5JD" secondAttribute="leading" id="dRZ-C1-I3p"/>
+                            <constraint firstAttribute="bottom" secondItem="Apj-a4-Le3" secondAttribute="bottom" id="hBd-ue-shf"/>
+                            <constraint firstItem="lVy-vc-7vj" firstAttribute="leading" secondItem="zBP-dY-5JD" secondAttribute="leading" constant="10" id="jDB-sJ-un2"/>
+                            <constraint firstItem="ADZ-5K-llu" firstAttribute="leading" secondItem="zBP-dY-5JD" secondAttribute="leading" constant="10" id="q1m-bL-5iL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zBP-dY-5JD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="6UN-lm-Mtd"/>
+                <constraint firstItem="zBP-dY-5JD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="m5n-lo-Q1c"/>
+                <constraint firstAttribute="trailing" secondItem="zBP-dY-5JD" secondAttribute="trailing" constant="10" id="pVR-aW-8dw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="387" height="235"/>
+            <connections>
+                <outlet property="heightBack" destination="6vm-x1-rvq" id="8HI-qJ-pz8"/>
+                <outlet property="imgName" destination="Khr-8H-eqN" id="2jw-Nv-Wp0"/>
+                <outlet property="lblCity" destination="ADZ-5K-llu" id="xRo-us-CiI"/>
+                <outlet property="lblCityTwo" destination="JNG-DB-DPv" id="zji-Dy-hgx"/>
+                <outlet property="lblName" destination="iz4-bt-hOA" id="U5G-U0-k59"/>
+                <outlet property="lblPrice" destination="7nJ-1X-eWe" id="49s-oO-Zyc"/>
+                <outlet property="lblVendor" destination="lVy-vc-7vj" id="xDI-Co-lhm"/>
+                <outlet property="viewBack" destination="zBP-dY-5JD" id="0U6-iB-hds"/>
+                <outlet property="viewGradient" destination="Apj-a4-Le3" id="BNo-Oj-AAq"/>
+            </connections>
+            <point key="canvasLocation" x="294.92753623188406" y="173.77232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppButtonBackgroundColor">
+            <color red="0.10199999809265137" green="0.63899999856948853" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

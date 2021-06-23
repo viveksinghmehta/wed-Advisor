@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArrangeCategoryCell" id="gTV-IL-0wX" customClass="ArrangeCategoryCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="195" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnf-hf-bqQ" customClass="SwiftShadowImageView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="175" height="190"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-23-Ddr">
+                                <rect key="frame" x="53.5" y="168.5" width="68.5" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13.5" id="7xl-XB-sRT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
+                                <color key="textColor" name="AppButtonBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e869f0db1534199a6464981f7a75515d" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-Tw-EG8">
+                                <rect key="frame" x="10" y="10" width="155" height="148.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Phv-23-Ddr" firstAttribute="centerX" secondItem="nnf-hf-bqQ" secondAttribute="centerX" id="72H-hc-C5h"/>
+                            <constraint firstAttribute="trailing" secondItem="w1W-Tw-EG8" secondAttribute="trailing" constant="10" id="DnX-n4-llu"/>
+                            <constraint firstAttribute="bottom" secondItem="Phv-23-Ddr" secondAttribute="bottom" constant="8" id="UnI-ww-arz"/>
+                            <constraint firstItem="Phv-23-Ddr" firstAttribute="top" secondItem="w1W-Tw-EG8" secondAttribute="bottom" constant="10" id="Z7k-Jo-uEl"/>
+                            <constraint firstItem="w1W-Tw-EG8" firstAttribute="top" secondItem="nnf-hf-bqQ" secondAttribute="top" constant="10" id="v8M-Y5-teq"/>
+                            <constraint firstItem="w1W-Tw-EG8" firstAttribute="leading" secondItem="nnf-hf-bqQ" secondAttribute="leading" constant="10" id="vvU-s6-Uin"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="imageShadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowOpacity">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageShadowRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nnf-hf-bqQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="0L2-tE-tUK"/>
+                <constraint firstItem="nnf-hf-bqQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="BQa-IY-b27"/>
+                <constraint firstAttribute="trailing" secondItem="nnf-hf-bqQ" secondAttribute="trailing" constant="10" id="KsE-7I-cT4"/>
+                <constraint firstAttribute="bottom" secondItem="nnf-hf-bqQ" secondAttribute="bottom" constant="10" id="ove-jz-gd2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="195" height="210"/>
+            <connections>
+                <outlet property="imgImage" destination="w1W-Tw-EG8" id="tWJ-q3-k7w"/>
+            </connections>
+            <point key="canvasLocation" x="213.768115942029" y="160.04464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="e869f0db1534199a6464981f7a75515d" width="900" height="1350"/>
+        <namedColor name="AppButtonBackgroundColor">
+            <color red="0.10199999809265137" green="0.63899999856948853" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
