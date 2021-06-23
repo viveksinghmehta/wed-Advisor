@@ -9,15 +9,21 @@
 import UIKit
 import SDWebImage
 
+protocol VendorDelegate: NSObject {
+    func vendorSelected(selcted: Int, indexPath: IndexPath)
+}
+
 class VendorsCollectionCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ventorCollectionView: UICollectionView!
     
-    
+    weak var delegate: VendorDelegate?
     private let identifier: String = "VendorHomeCollectionCell"
     var vendors: [HomeItemList]?
-        
+    var index: IndexPath = IndexPath(row: 0, section: 0)
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionInit()
@@ -70,7 +76,7 @@ extension VendorsCollectionCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        delegate?.vendorSelected(selcted: indexPath.row, indexPath: index)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

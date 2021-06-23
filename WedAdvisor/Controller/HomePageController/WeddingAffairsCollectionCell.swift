@@ -11,9 +11,10 @@ import UIKit
 class WeddingAffairsCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var imgImage: SwiftShadowImageView!
+    @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblRequest: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
     
         override func awakeFromNib() {
             super.awakeFromNib()

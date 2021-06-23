@@ -16,23 +16,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="vendorCollectionCell" rowHeight="283" id="KGk-i7-Jjw" customClass="VendorsCollectionCell" customModule="WedAdvisor" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="testimonialDashboardCell" rowHeight="201" id="KGk-i7-Jjw" customClass="TestimonialDashboardCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Vendors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYS-nA-zLt">
-                        <rect key="frame" x="16" y="0.0" width="134" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testimonials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3p-eG-Uuc">
+                        <rect key="frame" x="16" y="10" width="94.5" height="21"/>
                         <fontDescription key="fontDescription" name="ProductSans-Medium" family="Product Sans Medium" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-1s-wBb">
-                        <rect key="frame" x="16" y="31" width="288" height="238"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OFe-kK-0nO">
+                        <rect key="frame" x="16" y="41" width="288" height="150"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="grj-yZ-718">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p9J-vC-PZ0">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,20 +41,20 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="r1P-1s-wBb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="69Y-Ih-UPb"/>
-                    <constraint firstItem="rYS-nA-zLt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AyG-nb-pJ7"/>
-                    <constraint firstItem="r1P-1s-wBb" firstAttribute="top" secondItem="rYS-nA-zLt" secondAttribute="bottom" constant="10" id="cHA-uC-6Np"/>
-                    <constraint firstItem="r1P-1s-wBb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="iuk-bk-IM0"/>
-                    <constraint firstItem="rYS-nA-zLt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="m2u-oj-w08"/>
-                    <constraint firstItem="r1P-1s-wBb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="omi-lH-k13"/>
+                    <constraint firstItem="i3p-eG-Uuc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NdR-EJ-pkU"/>
+                    <constraint firstItem="OFe-kK-0nO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WNZ-2T-ejT"/>
+                    <constraint firstAttribute="bottom" secondItem="OFe-kK-0nO" secondAttribute="bottom" constant="10" id="a6c-Q5-u2C"/>
+                    <constraint firstAttribute="trailing" secondItem="OFe-kK-0nO" secondAttribute="trailing" constant="16" id="be3-lV-8W0"/>
+                    <constraint firstItem="OFe-kK-0nO" firstAttribute="top" secondItem="i3p-eG-Uuc" secondAttribute="bottom" constant="10" id="oj4-zi-sfb"/>
+                    <constraint firstItem="i3p-eG-Uuc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vGH-XB-J3H"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="titleLabel" destination="rYS-nA-zLt" id="SX6-uw-Cc7"/>
-                <outlet property="ventorCollectionView" destination="r1P-1s-wBb" id="AYU-0Q-UHM"/>
+                <outlet property="testimonialCollectionView" destination="OFe-kK-0nO" id="3KM-Fn-bAS"/>
+                <outlet property="titleLabel" destination="i3p-eG-Uuc" id="dV3-8r-O1M"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="174.77678571428569"/>
+            <point key="canvasLocation" x="131.8840579710145" y="144.30803571428569"/>
         </tableViewCell>
     </objects>
     <resources>

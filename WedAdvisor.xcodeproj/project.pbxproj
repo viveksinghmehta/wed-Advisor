@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1E2B900B268376C900ECEC45 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B9009268376C900ECEC45 /* CategoryCell.swift */; };
 		1E2B900C268376C900ECEC45 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B900A268376C900ECEC45 /* CategoryCell.xib */; };
+		1E2B900F26837CAD00ECEC45 /* PopularLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B900D26837CAD00ECEC45 /* PopularLocationCell.swift */; };
+		1E2B901026837CAD00ECEC45 /* PopularLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B900E26837CAD00ECEC45 /* PopularLocationCell.xib */; };
+		1E2B9013268383F500ECEC45 /* WeddingTippsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B9011268383F500ECEC45 /* WeddingTippsCell.swift */; };
+		1E2B9014268383F500ECEC45 /* WeddingTippsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B9012268383F500ECEC45 /* WeddingTippsCell.xib */; };
+		1E3D7C1E2683A1E900828A59 /* TestimonialDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3D7C1C2683A1E900828A59 /* TestimonialDashboardCell.swift */; };
+		1E3D7C1F2683A1E900828A59 /* TestimonialDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D7C1D2683A1E900828A59 /* TestimonialDashboardCell.xib */; };
 		1E702C632680E6BA008B468C /* ProductSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C572680E6B5008B468C /* ProductSans-Bold.ttf */; };
 		1E702C642680E6BA008B468C /* ProductSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C582680E6B5008B468C /* ProductSans-Thin.ttf */; };
 		1E702C652680E6BA008B468C /* ProductSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C592680E6B6008B468C /* ProductSans-Black.ttf */; };
@@ -36,8 +42,6 @@
 		1EAB1535267FB28200963612 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB1534267FB28200963612 /* TabBarController.swift */; };
 		1EC38E5C2682363D00B46217 /* PopularLocationsDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */; };
 		1EC38E5D2682363D00B46217 /* PopularLocationsDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E5B2682363D00B46217 /* PopularLocationsDashboardCell.xib */; };
-		1EC38E60268240E600B46217 /* PopularLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E5E268240E600B46217 /* PopularLocationCell.swift */; };
-		1EC38E61268240E600B46217 /* PopularLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E5F268240E600B46217 /* PopularLocationCell.xib */; };
 		1EC38E6326824C0900B46217 /* ExpandingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E6226824C0900B46217 /* ExpandingTableView.swift */; };
 		1EC38E662682574800B46217 /* PopularCategoriesDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */; };
 		1EC38E672682574800B46217 /* PopularCategoriesDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */; };
@@ -236,6 +240,12 @@
 /* Begin PBXFileReference section */
 		1E2B9009268376C900ECEC45 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1E2B900A268376C900ECEC45 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		1E2B900D26837CAD00ECEC45 /* PopularLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularLocationCell.swift; sourceTree = "<group>"; };
+		1E2B900E26837CAD00ECEC45 /* PopularLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularLocationCell.xib; sourceTree = "<group>"; };
+		1E2B9011268383F500ECEC45 /* WeddingTippsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingTippsCell.swift; sourceTree = "<group>"; };
+		1E2B9012268383F500ECEC45 /* WeddingTippsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeddingTippsCell.xib; sourceTree = "<group>"; };
+		1E3D7C1C2683A1E900828A59 /* TestimonialDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialDashboardCell.swift; sourceTree = "<group>"; };
+		1E3D7C1D2683A1E900828A59 /* TestimonialDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestimonialDashboardCell.xib; sourceTree = "<group>"; };
 		1E702C572680E6B5008B468C /* ProductSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Bold.ttf"; sourceTree = "<group>"; };
 		1E702C582680E6B5008B468C /* ProductSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Thin.ttf"; sourceTree = "<group>"; };
 		1E702C592680E6B6008B468C /* ProductSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Black.ttf"; sourceTree = "<group>"; };
@@ -263,8 +273,6 @@
 		1EAB1534267FB28200963612 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularLocationsDashboardCell.swift; sourceTree = "<group>"; };
 		1EC38E5B2682363D00B46217 /* PopularLocationsDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularLocationsDashboardCell.xib; sourceTree = "<group>"; };
-		1EC38E5E268240E600B46217 /* PopularLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularLocationCell.swift; sourceTree = "<group>"; };
-		1EC38E5F268240E600B46217 /* PopularLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularLocationCell.xib; sourceTree = "<group>"; };
 		1EC38E6226824C0900B46217 /* ExpandingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTableView.swift; sourceTree = "<group>"; };
 		1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCategoriesDashboardCell.swift; sourceTree = "<group>"; };
 		1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCategoriesDashboardCell.xib; sourceTree = "<group>"; };
@@ -502,12 +510,16 @@
 				1E702C712680E997008B468C /* VendorsCollectionCell.xib */,
 				1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */,
 				1EC38E5B2682363D00B46217 /* PopularLocationsDashboardCell.xib */,
-				1EC38E5E268240E600B46217 /* PopularLocationCell.swift */,
-				1EC38E5F268240E600B46217 /* PopularLocationCell.xib */,
+				1E2B900D26837CAD00ECEC45 /* PopularLocationCell.swift */,
+				1E2B900E26837CAD00ECEC45 /* PopularLocationCell.xib */,
 				1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */,
 				1E2B9009268376C900ECEC45 /* CategoryCell.swift */,
 				1E2B900A268376C900ECEC45 /* CategoryCell.xib */,
 				1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */,
+				1E2B9011268383F500ECEC45 /* WeddingTippsCell.swift */,
+				1E2B9012268383F500ECEC45 /* WeddingTippsCell.xib */,
+				1E3D7C1C2683A1E900828A59 /* TestimonialDashboardCell.swift */,
+				1E3D7C1D2683A1E900828A59 /* TestimonialDashboardCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1389,12 +1401,12 @@
 				BFDA25C425E3D8FD0001790C /* CategoryCollectionCell.xib in Resources */,
 				A8546B9325BAA12C0008507B /* SeatingTableCell.xib in Resources */,
 				BF7C865825FC9079009835F3 /* FilterListingCell.xib in Resources */,
-				1EC38E61268240E600B46217 /* PopularLocationCell.xib in Resources */,
 				1E702C672680E6BA008B468C /* ProductSans-LightItalic.ttf in Resources */,
 				BF56508725FF638F0058B1B3 /* VendorOptionSelectionCell.xib in Resources */,
 				A87EF4CB25AEAA3B0032A0EA /* LaunchScreen.storyboard in Resources */,
 				1E702C632680E6BA008B468C /* ProductSans-Bold.ttf in Resources */,
 				A85877E525BE7FF1007E6A8A /* CoupleGuestListCell.xib in Resources */,
+				1E2B901026837CAD00ECEC45 /* PopularLocationCell.xib in Resources */,
 				BFEF6EE526188B1A001756D2 /* CustomFooterView.xib in Resources */,
 				A8A675A425D4270C003973C5 /* AboutCell.xib in Resources */,
 				A88587A225B84503005729A8 /* NewTaskCell.xib in Resources */,
@@ -1412,6 +1424,7 @@
 				BFDA25C225E3D8D80001790C /* NameCollectionCell.xib in Resources */,
 				BF56508325FF601B0058B1B3 /* VendorOptionCell.xib in Resources */,
 				1EC38E5D2682363D00B46217 /* PopularLocationsDashboardCell.xib in Resources */,
+				1E3D7C1F2683A1E900828A59 /* TestimonialDashboardCell.xib in Resources */,
 				1E702C6D2680E6BA008B468C /* ProductSans-BoldItalic.ttf in Resources */,
 				1EAB1533267F9C2300963612 /* SplashController.xib in Resources */,
 				BF4D18612620148200791CCE /* BlogDetailCategory.xib in Resources */,
@@ -1431,6 +1444,7 @@
 				1E702C692680E6BA008B468C /* ProductSans-MediumItalic.ttf in Resources */,
 				1E702C652680E6BA008B468C /* ProductSans-Black.ttf in Resources */,
 				A8C14E0725AED5250094BCCE /* segoe-ui-4-cufonfonts in Resources */,
+				1E2B9014268383F500ECEC45 /* WeddingTippsCell.xib in Resources */,
 				BF475CE325EA59BB0021DEF4 /* VendorHomeCollectionCell.xib in Resources */,
 				BF7C865425FC9065009835F3 /* FilterCategoryCell.xib in Resources */,
 				BF9B192725EBA12200495EA6 /* TestimonialCell.xib in Resources */,
@@ -1513,6 +1527,7 @@
 				A853445D25B1C20700683817 /* HomePageController.swift in Sources */,
 				BF257718262951C3009C2EE6 /* EmptySegue.swift in Sources */,
 				A86399D025B00B01009DEA25 /* VendorProductDetailController.swift in Sources */,
+				1E3D7C1E2683A1E900828A59 /* TestimonialDashboardCell.swift in Sources */,
 				A8C14E0925AEDE300094BCCE /* Extensions.swift in Sources */,
 				A853444C25B18B1D00683817 /* BlogListController.swift in Sources */,
 				BFE61A0526219230009A7798 /* TodoModel.swift in Sources */,
@@ -1536,7 +1551,6 @@
 				BF475CC525EA20380021DEF4 /* HomeData.swift in Sources */,
 				BF6B74D2261440BA000B1B67 /* GalleryModel.swift in Sources */,
 				BF56507E25FF48150058B1B3 /* VendorDetailTopTableCell.swift in Sources */,
-				1EC38E60268240E600B46217 /* PopularLocationCell.swift in Sources */,
 				A8546B9525BAAE4C0008507B /* WedAdviserColor.swift in Sources */,
 				A87EF4C025AEAA3A0032A0EA /* ViewController.swift in Sources */,
 				A885878E25B7FFD0005729A8 /* WeddingInfoController.swift in Sources */,
@@ -1554,6 +1568,7 @@
 				1EC38E6326824C0900B46217 /* ExpandingTableView.swift in Sources */,
 				A8A675A325D4270C003973C5 /* AboutCell.swift in Sources */,
 				A805B32825B6EAE700856400 /* DeleteAccountController.swift in Sources */,
+				1E2B9013268383F500ECEC45 /* WeddingTippsCell.swift in Sources */,
 				A85DD6FF25B939D7007237FE /* ActivityOptionsController.swift in Sources */,
 				A889FA8025B544D80083E988 /* LocationController.swift in Sources */,
 				BF7C865725FC9079009835F3 /* FilterListingCell.swift in Sources */,
@@ -1574,6 +1589,7 @@
 				A889FA9D25B58BE80083E988 /* SelectOptionsCollectionCell.swift in Sources */,
 				BFFF558F263007CF006F048E /* GuestListPop.swift in Sources */,
 				BF136BAB26305B3800E0A34C /* AddGuestModel.swift in Sources */,
+				1E2B900F26837CAD00ECEC45 /* PopularLocationCell.swift in Sources */,
 				BF9B192625EBA12200495EA6 /* TestimonialCell.swift in Sources */,
 				A8546B8C25BA98690008507B /* SeatingTablePopUpController.swift in Sources */,
 				A86E8DD425C963A80061388C /* PriceInfoController.swift in Sources */,

@@ -10,18 +10,19 @@ import UIKit
 import SDWebImage
 
 protocol PopularLocationDelegate: NSObject {
-    func popularLocationSelected(index: Int)
+    func popularLocationSelected(selected: Int, indexPath: IndexPath)
 }
 
 class PopularLocationsDashboardCell: UITableViewCell {
 
     //MARK:- OUTLETS
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var locationTableView: ExpandingTableView!
+    @IBOutlet weak var locationCollectionView: UICollectionView!
     
     //MARK:- PROPERTIES
     weak var delegate: PopularLocationDelegate?
     var locations: [GetLocation]?
+    var index: IndexPath = IndexPath(row: 0, section: 0)
     
     //MARK:- IDENTIFIERS
     private let idetifier: String = "locationCell"
@@ -32,15 +33,14 @@ class PopularLocationsDashboardCell: UITableViewCell {
     }
     
     fileprivate func tabviewInit() {
-        locationTableView.rowHeight = 160
-        locationTableView.register(UINib(nibName: "PopularLocationCell", bundle: nil), forCellReuseIdentifier: idetifier)
-        locationTableView.delegate = self
-        locationTableView.dataSource = self
-        locationTableView.reloadData()
+        locationCollectionView.register(UINib(nibName: "PopularLocationCell", bundle: nil), forCellWithReuseIdentifier: idetifier)
+        locationCollectionView.delegate = self
+        locationCollectionView.dataSource = self
+        locationCollectionView.reloadData()
     }
     
     func reloadTable() {
-        locationTableView.reloadData()
+        locationCollectionView.reloadData()
     }
 
     
@@ -52,9 +52,10 @@ class PopularLocationsDashboardCell: UITableViewCell {
     
 }
 
-extension PopularLocationsDashboardCell: UITableViewDelegate, UITableViewDataSource {
+extension PopularLocationsDashboardCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let locations = locations {
             return locations.count
         } else {
@@ -62,17 +63,22 @@ extension PopularLocationsDashboardCell: UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: idetifier, for: indexPath) as? PopularLocationCell else { return UITableViewCell() }
-        cell.cityLabel.text = Helper.optionalStringToString(value: locations?[indexPath.row].location?.city).uppercased()
-        cell.numberOfVendorsLabel.text = Helper.optionalIntToString(value: locations?[indexPath.row].vendors) + " Vendors"
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idetifier, for: indexPath) as? PopularLocationCell else { return UICollectionViewCell() }
+        cell.cityName.text = Helper.optionalStringToString(value: locations?[indexPath.row].location?.city).uppercased()
+        cell.vendorNo.text = Helper.optionalIntToString(value: locations?[indexPath.row].vendors) + " Vendors"
         cell.cityImageView.contentMode = .scaleAspectFill
         cell.cityImageView.sd_setImage(with: URL(string: GlobalConstantClass.APIConstantNames.imageBaseURL + Helper.optionalStringToString(value: locations?[indexPath.row].location?.logo)), placeholderImage: nil)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.popularLocationSelected(index: indexPath.row)
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width / 3 , height: collectionView.bounds.height / 2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.popularLocationSelected(selected: indexPath.row, indexPath: index)
     }
     
     

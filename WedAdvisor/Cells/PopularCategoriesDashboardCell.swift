@@ -8,13 +8,18 @@
 
 import UIKit
 
+protocol PopularCategoryDelegate: NSObject {
+    func categorySelected(selected: Int, IndexPath: IndexPath)
+}
+
 class PopularCategoriesDashboardCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     var popularCategories: [HomeVendorType]?
-    
+    var index: IndexPath = IndexPath(row: 0, section: 0)
+    weak var delegate: PopularCategoryDelegate?
     private let identifier: String = "categoryCell"
     
     
@@ -28,6 +33,7 @@ class PopularCategoriesDashboardCell: UITableViewCell {
         categoryCollectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: identifier)
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        categoryCollectionView.reloadData()
     }
 
     
@@ -60,5 +66,9 @@ extension PopularCategoriesDashboardCell: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width / 3 , height: collectionView.bounds.height / 2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.categorySelected(selected: indexPath.row, IndexPath: index)
     }
 }

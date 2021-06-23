@@ -47,6 +47,7 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     @IBOutlet weak var tblHome: UITableView!
     
     
+    @IBOutlet weak var chooseLocationLabel: UILabel!
     var arrHomeDetail : [HomeDetail]?
     var arrTitle = [String]()
     var arrItemList : [HomeItemList]?
@@ -66,6 +67,8 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     private let sildeShowIdentifier: String = "HomeSliderCell"
     private let popularLocationsIdentifier: String = "popularLocationDashboard"
     private let popularCategoriesIdentifier: String = "popularCategories"
+    private let weddingIdentifier: String = "weddingTipsCell"
+    private let testimonialIdenitifier: String = "testimonialDashboardCell"
     
     //MARK:- NewVariables
     var dashboardArray = [HomeDetail?]()
@@ -93,6 +96,8 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
         tblHome.register(UINib(nibName: "VendorsCollectionCell" , bundle: nil), forCellReuseIdentifier: vendorsIdentifiers)
         tblHome.register(UINib(nibName: "PopularLocationsDashboardCell", bundle: nil), forCellReuseIdentifier: popularLocationsIdentifier)
         tblHome.register(UINib(nibName: "PopularCategoriesDashboardCell", bundle: nil), forCellReuseIdentifier: popularCategoriesIdentifier)
+        tblHome.register(UINib(nibName: "WeddingTippsCell", bundle: nil), forCellReuseIdentifier: weddingIdentifier)
+        tblHome.register(UINib(nibName: "TestimonialDashboardCell", bundle: nil), forCellReuseIdentifier: testimonialIdenitifier)
         tblHome.dataSource = self
         tblHome.delegate = self
     }
@@ -116,16 +121,17 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    @IBAction func locationBtnTapped(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LocationController") as? LocationController else { return }
-        vc.arrPopularLoc = arrSendLoc
-        vc.arrPopularLocNew = arrSendLoc
-        present(vc, animated: true, completion: nil)
-//        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
-    }
+//    @IBAction func locationBtnTapped(_ sender: Any) {
+//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LocationController") as? LocationController else { return }
+//        vc.arrPopularLoc = arrSendLoc
+//        vc.arrPopularLocNew = arrSendLoc
+//        present(vc, animated: true, completion: nil)
+////        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+//    }
     
     @IBAction func changeLocation(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "LocationController") as? LocationController else { return }
+        vc.delegate = self
         vc.arrPopularLoc = arrSendLoc
         vc.arrPopularLocNew = arrSendLoc
         present(vc, animated: true, completion: nil)
@@ -138,10 +144,27 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     
 }
 
-extension NewHomeVC: PopularLocationDelegate {
+extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDelegate, WeddingTipsDelegate, LocationDelegate {
     
-    func popularLocationSelected(index: Int) {
-        print(index)
+    func locationSelected(city: String) {
+        self.chooseLocationLabel.text = city.capitalizingFirstLetter()
+    }
+    
+    
+    func categorySelected(selected: Int, IndexPath: IndexPath) {
+        print("")
+    }
+    
+    func vendorSelected(selcted: Int, indexPath: IndexPath) {
+        print("")
+    }
+    
+    func weddingTipSelected(selected: Int, indexPath: IndexPath) {
+        print("")
+    }
+    
+    func popularLocationSelected(selected: Int, indexPath: IndexPath) {
+        print("")
     }
     
 }
@@ -155,9 +178,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            guard let slidercell = tableView.dequeueReusableCell(withIdentifier: sildeShowIdentifier) as? HomeSliderCell else {return UITableViewCell() }
-            slidercell.bannerImages = bannerData.map({ Helper.optionalStringToString(value: $0.image) })
-            return slidercell
+            return returnSlideCell(tableView, cellForRowAt: indexPath)
         } else {
             if let id = dashboardArray[indexPath.row - 1]?.type_id {
                 switch id {
@@ -170,9 +191,9 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
                 case 7:
                     return UITableViewCell()
                 case 5:
-                    return UITableViewCell()
+                    return returnWeddingTipsCell(tableView, cellForRowAt: indexPath)
                 case 4:
-                    return UITableViewCell()
+                    return returnTestimonialsCells(tableView, cellForRowAt: indexPath)
                 default:
                     return UITableViewCell()
                 }
@@ -182,9 +203,30 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    fileprivate func returnTestimonialsCells(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: testimonialIdenitifier, for: indexPath) as? TestimonialDashboardCell else { return UITableViewCell() }
+        cell.testionomials = dashboardArray[indexPath.row - 1]?.testimonials
+        return cell
+    }
+    
+    fileprivate func returnWeddingTipsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: weddingIdentifier, for: indexPath) as? WeddingTippsCell else { return UITableViewCell() }
+        cell.weddingTipsAndNews = dashboardArray[indexPath.row - 1]?.weddTipsNews
+        cell.delegate = self
+        return cell
+    }
+    
+    fileprivate func returnSlideCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let slidercell = tableView.dequeueReusableCell(withIdentifier: sildeShowIdentifier) as? HomeSliderCell else { return UITableViewCell() }
+        slidercell.bannerImages = bannerData.map({ Helper.optionalStringToString(value: $0.image) })
+        slidercell.collectionViewTopBanner.reloadData()
+        return slidercell
+    }
+    
     fileprivate func returnPopularCategoriesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: popularCategoriesIdentifier, for: indexPath) as? PopularCategoriesDashboardCell else { return UITableViewCell() }
         cell.popularCategories = dashboardArray[indexPath.row - 1]?.vendor_type
+        cell.delegate = self
         return cell
     }
     
@@ -193,6 +235,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: vendorsIdentifiers, for: indexPath) as? VendorsCollectionCell else { return UITableViewCell() }
         cell.titleLabel.text = Helper.optionalStringToString(value: dashboardArray[indexPath.row - 1]?.title)
         cell.vendors = dashboardArray[indexPath.row - 1]?.itemlist
+        cell.delegate = self
         return cell
     }
     
@@ -217,13 +260,13 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
                 case 2:
                     return 331
                 case 3:
-                    return UITableView.automaticDimension
+                    return 360
                 case 7:
                     return 0
                 case 5:
-                    return 0
+                    return 280
                 case 4:
-                    return 0
+                    return 230
                 default:
                     return 0
                 }
