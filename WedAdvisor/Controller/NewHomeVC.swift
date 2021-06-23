@@ -146,17 +146,28 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
 
 extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDelegate, WeddingTipsDelegate, LocationDelegate {
     
+    func moreWeddingTips() {
+        self.tabBarController?.selectedIndex = 4
+    }
+    
+    
     func locationSelected(city: String) {
         self.chooseLocationLabel.text = city.capitalizingFirstLetter()
     }
     
     
     func categorySelected(selected: Int, IndexPath: IndexPath) {
-        print("")
+        if selected == 5 {
+            self.tabBarController?.selectedIndex = 1
+        } else {
+            print("this")
+        }
     }
     
     func vendorSelected(selcted: Int, indexPath: IndexPath) {
-        print("")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "VendorProductDetailController") as? VendorProductDetailController else { return }
+        vc.vendorId = dashboardArray[indexPath.row - 1]?.itemlist?[selcted].id
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
     func weddingTipSelected(selected: Int, indexPath: IndexPath) {
@@ -213,6 +224,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: weddingIdentifier, for: indexPath) as? WeddingTippsCell else { return UITableViewCell() }
         cell.weddingTipsAndNews = dashboardArray[indexPath.row - 1]?.weddTipsNews
         cell.delegate = self
+        cell.index = indexPath
         return cell
     }
     
@@ -227,6 +239,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: popularCategoriesIdentifier, for: indexPath) as? PopularCategoriesDashboardCell else { return UITableViewCell() }
         cell.popularCategories = dashboardArray[indexPath.row - 1]?.vendor_type
         cell.delegate = self
+        cell.index = indexPath
         return cell
     }
     
@@ -235,6 +248,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: vendorsIdentifiers, for: indexPath) as? VendorsCollectionCell else { return UITableViewCell() }
         cell.titleLabel.text = Helper.optionalStringToString(value: dashboardArray[indexPath.row - 1]?.title)
         cell.vendors = dashboardArray[indexPath.row - 1]?.itemlist
+        cell.index = indexPath
         cell.delegate = self
         return cell
     }
@@ -243,6 +257,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: popularLocationsIdentifier, for: indexPath) as? PopularLocationsDashboardCell else { return UITableViewCell() }
         cell.locations = dashboardArray[indexPath.row - 1]?.location
         cell.delegate = self
+        cell.index = indexPath
         cell.reloadTable()
         return cell
     }

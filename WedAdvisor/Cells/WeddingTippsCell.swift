@@ -11,6 +11,7 @@ import SDWebImage
 
 protocol WeddingTipsDelegate: NSObject {
     func weddingTipSelected(selected: Int, indexPath: IndexPath)
+    func moreWeddingTips()
 }
 
 class WeddingTippsCell: UITableViewCell {
@@ -48,7 +49,7 @@ class WeddingTippsCell: UITableViewCell {
     
     
     @IBAction func moreAction(_ sender: UIButton) {
-        print("more action")
+        delegate?.moreWeddingTips()
     }
     
     

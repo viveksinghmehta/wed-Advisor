@@ -8,10 +8,11 @@
 
 import UIKit
 
-class AllVendorsController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class AllVendorsController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-     @IBOutlet weak var vendorsCollView:UICollectionView!
-     @IBOutlet weak var collViewHeight:NSLayoutConstraint!
+    
+     @IBOutlet weak var vendorsCollView: UICollectionView!
+     @IBOutlet weak var collViewHeight: NSLayoutConstraint!
     var arrAllVendor : [HomeVendorType]?
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -19,14 +20,8 @@ class AllVendorsController: UIViewController,UICollectionViewDelegate,UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self
-        .categoryCollDimension()
+        self.categoryCollDimension()
         registerNibs()
-            let statusBar1 =  UIView()
-                       statusBar1.frame = UIApplication.shared.statusBarFrame
-        statusBar1.backgroundColor = WedAdviserColor.themeOrangeColor()
-                       UIApplication.shared.keyWindow?.addSubview(statusBar1)
-                      self.setNeedsStatusBarAppearanceUpdate()
         vendorData()
 
     }
@@ -35,13 +30,15 @@ class AllVendorsController: UIViewController,UICollectionViewDelegate,UICollecti
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    @IBAction func backBtn(sender: UIButton){
-          self.navigationController?.popViewController(animated: true)
+    @IBAction func backBtn(sender: UIButton) {
+        self.tabBarController?.selectedIndex = 0
+//          self.navigationController?.popViewController(animated: true)
       }
     
     func categoryCollDimension(){
@@ -97,58 +94,20 @@ class AllVendorsController: UIViewController,UICollectionViewDelegate,UICollecti
         vc?.vendorType = dict?.id
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       switch UIScreen.main.nativeBounds.height {
-       case 1136:
-        print("iPhone 5 or 5S or 5C")
         
-       case 1334:
-        print("iPhone 6/6S/7/8")
-        let size = (screenWidth-20) / 3
-        let hgt = (screenHeight) / 4
-        return CGSize(width: size, height: hgt)
-       case 1920, 2208:
-        print("iPhone 6+/6S+/7+/8+")
-      let size = (vendorsCollView.frame.width) / 3.2
-        let hgt = (screenHeight) / 4.3
-        return CGSize(width: size, height: hgt)
-        
-       case 2436:
-        print("iPhone X/XS/11 Pro")
-        let size = (vendorsCollView.frame.width) / 3.2
-        let hgt = (screenHeight) / 4.8
-        return CGSize(width: size, height: hgt)
-       case 2688:
-        print("iPhone XS Max/11 Pro Max")
-        let size = (vendorsCollView.frame.width) / 3.2
-        let hgt = (screenHeight) / 5.4
-        return CGSize(width: size, height: hgt)
-       case 1792:
-        print("iPhone XR/ 11 ")
-       let size = (screenWidth-20) / 3
-        let hgt = (screenHeight) / 5.4
-       return CGSize(width: size, height: hgt)
-       case 1170:
-        print("iphone12")
-        let size = (screenWidth-20) / 3.3
-        let hgt = (screenHeight) / 5.4
-        return CGSize(width: size, height: hgt)
-       default:
-        let size = (screenWidth-20) / 3
-        let hgt = (screenHeight) / 4
-        return CGSize(width: size, height: hgt)
-        }
-       let size = (screenWidth-20) / 3
-       let hgt = (screenHeight) / 4
+        let size = (UIScreen.main.bounds.width - 20) / 3
+       let hgt = (UIScreen.main.bounds.height) / 4
        return CGSize(width: size, height: hgt)
     }
 }
 
 
 
-extension AllVendorsController{
-    func vendorData()
-    {
+extension AllVendorsController {
+    func vendorData() {
         let dictparam = ["id":53] as [String:Any]
         
         self.showActivityIndicator(uiView: self.view)
