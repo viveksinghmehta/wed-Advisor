@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2B900B268376C900ECEC45 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B9009268376C900ECEC45 /* CategoryCell.swift */; };
+		1E2B900C268376C900ECEC45 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B900A268376C900ECEC45 /* CategoryCell.xib */; };
 		1E702C632680E6BA008B468C /* ProductSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C572680E6B5008B468C /* ProductSans-Bold.ttf */; };
 		1E702C642680E6BA008B468C /* ProductSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C582680E6B5008B468C /* ProductSans-Thin.ttf */; };
 		1E702C652680E6BA008B468C /* ProductSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E702C592680E6B6008B468C /* ProductSans-Black.ttf */; };
@@ -39,8 +41,6 @@
 		1EC38E6326824C0900B46217 /* ExpandingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E6226824C0900B46217 /* ExpandingTableView.swift */; };
 		1EC38E662682574800B46217 /* PopularCategoriesDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */; };
 		1EC38E672682574800B46217 /* PopularCategoriesDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */; };
-		1EC38E6A26825D6100B46217 /* CateogryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E6826825D6100B46217 /* CateogryCell.swift */; };
-		1EC38E6B26825D6100B46217 /* CateogryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E6926825D6100B46217 /* CateogryCell.xib */; };
 		A805B32825B6EAE700856400 /* DeleteAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805B32725B6EAE700856400 /* DeleteAccountController.swift */; };
 		A84387D625BAEE4E00C7A553 /* RealWeddingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84387D525BAEE4E00C7A553 /* RealWeddingController.swift */; };
 		A84387D825BAF9E600C7A553 /* RealWeddingUploadGallaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84387D725BAF9E600C7A553 /* RealWeddingUploadGallaryCell.swift */; };
@@ -234,6 +234,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E2B9009268376C900ECEC45 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		1E2B900A268376C900ECEC45 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		1E702C572680E6B5008B468C /* ProductSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Bold.ttf"; sourceTree = "<group>"; };
 		1E702C582680E6B5008B468C /* ProductSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Thin.ttf"; sourceTree = "<group>"; };
 		1E702C592680E6B6008B468C /* ProductSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Black.ttf"; sourceTree = "<group>"; };
@@ -266,8 +268,6 @@
 		1EC38E6226824C0900B46217 /* ExpandingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTableView.swift; sourceTree = "<group>"; };
 		1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCategoriesDashboardCell.swift; sourceTree = "<group>"; };
 		1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCategoriesDashboardCell.xib; sourceTree = "<group>"; };
-		1EC38E6826825D6100B46217 /* CateogryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CateogryCell.swift; sourceTree = "<group>"; };
-		1EC38E6926825D6100B46217 /* CateogryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CateogryCell.xib; sourceTree = "<group>"; };
 		501DE8CD603E88908C610459 /* Pods_WedAdvisor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedAdvisor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F36FB052EDE80E02E29F72 /* Pods-WedAdvisor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedAdvisor.debug.xcconfig"; path = "Target Support Files/Pods-WedAdvisor/Pods-WedAdvisor.debug.xcconfig"; sourceTree = "<group>"; };
 		73EFBBEE0A836B3BFDC8AF29 /* Pods-WedAdvisor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedAdvisor.release.xcconfig"; path = "Target Support Files/Pods-WedAdvisor/Pods-WedAdvisor.release.xcconfig"; sourceTree = "<group>"; };
@@ -505,9 +505,9 @@
 				1EC38E5E268240E600B46217 /* PopularLocationCell.swift */,
 				1EC38E5F268240E600B46217 /* PopularLocationCell.xib */,
 				1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */,
+				1E2B9009268376C900ECEC45 /* CategoryCell.swift */,
+				1E2B900A268376C900ECEC45 /* CategoryCell.xib */,
 				1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */,
-				1EC38E6826825D6100B46217 /* CateogryCell.swift */,
-				1EC38E6926825D6100B46217 /* CateogryCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1416,6 +1416,7 @@
 				1EAB1533267F9C2300963612 /* SplashController.xib in Resources */,
 				BF4D18612620148200791CCE /* BlogDetailCategory.xib in Resources */,
 				1E702C6E2680E6BA008B468C /* ProductSans-Medium.ttf in Resources */,
+				1E2B900C268376C900ECEC45 /* CategoryCell.xib in Resources */,
 				1E702C662680E6BA008B468C /* ProductSans-Italic.ttf in Resources */,
 				BF56507F25FF48150058B1B3 /* VendorDetailTopTableCell.xib in Resources */,
 				BF475CD525EA397E0021DEF4 /* HomeSliderCell.xib in Resources */,
@@ -1427,7 +1428,6 @@
 				1E702C6C2680E6BA008B468C /* ProductSans-Regular.ttf in Resources */,
 				BF919F5625F1E7E1000F7B26 /* CellAdvertisements.xib in Resources */,
 				BFAFD72425F8B6A9004483E4 /* AmenitiesCell.xib in Resources */,
-				1EC38E6B26825D6100B46217 /* CateogryCell.xib in Resources */,
 				1E702C692680E6BA008B468C /* ProductSans-MediumItalic.ttf in Resources */,
 				1E702C652680E6BA008B468C /* ProductSans-Black.ttf in Resources */,
 				A8C14E0725AED5250094BCCE /* segoe-ui-4-cufonfonts in Resources */,
@@ -1542,7 +1542,6 @@
 				A885878E25B7FFD0005729A8 /* WeddingInfoController.swift in Sources */,
 				A853445E25B1C20700683817 /* NameTableCell.swift in Sources */,
 				A853445A25B1C20700683817 /* CategoryCollectionCell.swift in Sources */,
-				1EC38E6A26825D6100B46217 /* CateogryCell.swift in Sources */,
 				A85DD70625B94824007237FE /* MyWishListController.swift in Sources */,
 				A862633125C1771A001ECA52 /* WeddingController.swift in Sources */,
 				BF475A5A25EE1F40002E5375 /* VendorDetail.swift in Sources */,
@@ -1607,6 +1606,7 @@
 				BF56508225FF601B0058B1B3 /* VendorOptionCell.swift in Sources */,
 				BF6AEDA9262B2D4E002258EC /* GuestListModel.swift in Sources */,
 				1EA8AF14267BA19B0001542A /* CreateTODOController.swift in Sources */,
+				1E2B900B268376C900ECEC45 /* CategoryCell.swift in Sources */,
 				A85E55DD25E0F9680068EEE8 /* BlogDetailCollectionViewCell.swift in Sources */,
 				A885879125B813B4005729A8 /* EmailNotificationController.swift in Sources */,
 				A853445F25B1C20700683817 /* SetCollectionCell.swift in Sources */,

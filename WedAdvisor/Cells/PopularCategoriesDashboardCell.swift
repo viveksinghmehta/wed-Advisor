@@ -25,7 +25,7 @@ class PopularCategoriesDashboardCell: UITableViewCell {
     
     
     fileprivate func categoryInit() {
-        categoryCollectionView.register(UINib(nibName: "CateogryCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+        categoryCollectionView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: identifier)
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
     }
@@ -34,7 +34,6 @@ class PopularCategoriesDashboardCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }
@@ -46,7 +45,8 @@ extension PopularCategoriesDashboardCell: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? CateogryCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
+        cell.layoutSubviews()
         if indexPath.row == 5 {
             cell.categoryImageView.image = UIImage(systemName: "plus")
             cell.categoryImageView.tintColor = WedAdviserColor.themeOrangeColor()
