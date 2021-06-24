@@ -40,6 +40,12 @@
 		1EAB1532267F9C2300963612 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB1530267F9C2300963612 /* SplashController.swift */; };
 		1EAB1533267F9C2300963612 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB1531267F9C2300963612 /* SplashController.xib */; };
 		1EAB1535267FB28200963612 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB1534267FB28200963612 /* TabBarController.swift */; };
+		1EBC78822684DDC000733E5C /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC78802684DDC000733E5C /* SideMenuController.swift */; };
+		1EBC78832684DDC000733E5C /* SideMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC78812684DDC000733E5C /* SideMenuController.xib */; };
+		1EBC78862684F70E00733E5C /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC78842684F70E00733E5C /* SideMenuCell.swift */; };
+		1EBC78872684F70E00733E5C /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC78852684F70E00733E5C /* SideMenuCell.xib */; };
+		1EBC788A2684F86800733E5C /* SeperatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC78882684F86800733E5C /* SeperatorCell.swift */; };
+		1EBC788B2684F86800733E5C /* SeperatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC78892684F86800733E5C /* SeperatorCell.xib */; };
 		1EC38E5C2682363D00B46217 /* PopularLocationsDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */; };
 		1EC38E5D2682363D00B46217 /* PopularLocationsDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E5B2682363D00B46217 /* PopularLocationsDashboardCell.xib */; };
 		1EC38E6326824C0900B46217 /* ExpandingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E6226824C0900B46217 /* ExpandingTableView.swift */; };
@@ -271,6 +277,12 @@
 		1EAB1530267F9C2300963612 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		1EAB1531267F9C2300963612 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		1EAB1534267FB28200963612 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1EBC78802684DDC000733E5C /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		1EBC78812684DDC000733E5C /* SideMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuController.xib; sourceTree = "<group>"; };
+		1EBC78842684F70E00733E5C /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		1EBC78852684F70E00733E5C /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		1EBC78882684F86800733E5C /* SeperatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperatorCell.swift; sourceTree = "<group>"; };
+		1EBC78892684F86800733E5C /* SeperatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeperatorCell.xib; sourceTree = "<group>"; };
 		1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularLocationsDashboardCell.swift; sourceTree = "<group>"; };
 		1EC38E5B2682363D00B46217 /* PopularLocationsDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularLocationsDashboardCell.xib; sourceTree = "<group>"; };
 		1EC38E6226824C0900B46217 /* ExpandingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTableView.swift; sourceTree = "<group>"; };
@@ -520,6 +532,10 @@
 				1E2B9012268383F500ECEC45 /* WeddingTippsCell.xib */,
 				1E3D7C1C2683A1E900828A59 /* TestimonialDashboardCell.swift */,
 				1E3D7C1D2683A1E900828A59 /* TestimonialDashboardCell.xib */,
+				1EBC78842684F70E00733E5C /* SideMenuCell.swift */,
+				1EBC78852684F70E00733E5C /* SideMenuCell.xib */,
+				1EBC78882684F86800733E5C /* SeperatorCell.swift */,
+				1EBC78892684F86800733E5C /* SeperatorCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -527,6 +543,7 @@
 		1EA8AF10267B9F820001542A /* New Views */ = {
 			isa = PBXGroup;
 			children = (
+				1EBC78812684DDC000733E5C /* SideMenuController.xib */,
 				1EA8AF17267BA1AD0001542A /* EditTODOController.xib */,
 				1EA8AF13267BA19B0001542A /* CreateTODOController.xib */,
 				1EAB1531267F9C2300963612 /* SplashController.xib */,
@@ -543,6 +560,7 @@
 				1EAB1530267F9C2300963612 /* SplashController.swift */,
 				1EAB152C267F9C1000963612 /* OnBoardingViewController.swift */,
 				1EAB1534267FB28200963612 /* TabBarController.swift */,
+				1EBC78802684DDC000733E5C /* SideMenuController.swift */,
 			);
 			path = "New Controllers";
 			sourceTree = "<group>";
@@ -1415,6 +1433,7 @@
 				BF8B7D7525EF4BA100779721 /* AllVendorCollectionViewCell.xib in Resources */,
 				A85DD71725B9910C007237FE /* BudgetDetailCell.xib in Resources */,
 				A87EF4C825AEAA3B0032A0EA /* Assets.xcassets in Resources */,
+				1EBC78832684DDC000733E5C /* SideMenuController.xib in Resources */,
 				A853447525B2B76900683817 /* VendorProductCell.xib in Resources */,
 				A853446B25B1C21E00683817 /* NameTableCell.xib in Resources */,
 				A889FA9E25B58BE80083E988 /* SelectOptionsCollectionCell.xib in Resources */,
@@ -1441,6 +1460,7 @@
 				1E702C6C2680E6BA008B468C /* ProductSans-Regular.ttf in Resources */,
 				BF919F5625F1E7E1000F7B26 /* CellAdvertisements.xib in Resources */,
 				BFAFD72425F8B6A9004483E4 /* AmenitiesCell.xib in Resources */,
+				1EBC78872684F70E00733E5C /* SideMenuCell.xib in Resources */,
 				1E702C692680E6BA008B468C /* ProductSans-MediumItalic.ttf in Resources */,
 				1E702C652680E6BA008B468C /* ProductSans-Black.ttf in Resources */,
 				A8C14E0725AED5250094BCCE /* segoe-ui-4-cufonfonts in Resources */,
@@ -1457,6 +1477,7 @@
 				BF538D8425F388BA00F5585C /* VendorFilterCell.xib in Resources */,
 				A87EF4C325AEAA3A0032A0EA /* Main.storyboard in Resources */,
 				A889FA8C25B5731E0083E988 /* GallaryCell.xib in Resources */,
+				1EBC788B2684F86800733E5C /* SeperatorCell.xib in Resources */,
 				A85557D725BFFCAD00C91638 /* MyWishListCell.xib in Resources */,
 				A862632C25C14C95001ECA52 /* DashboardTableCell.xib in Resources */,
 				1E702C6A2680E6BA008B468C /* ProductSans-ThinItalic.ttf in Resources */,
@@ -1537,6 +1558,7 @@
 				BF683A042618884E00DDDC8C /* FooterVC.swift in Sources */,
 				A853445C25B1C20700683817 /* UpcomingCollectionCell.swift in Sources */,
 				A885879525B829CC005729A8 /* ToDoListPopUpController.swift in Sources */,
+				1EBC788A2684F86800733E5C /* SeperatorCell.swift in Sources */,
 				BFEF6EE426188B1A001756D2 /* CustomFooterView.swift in Sources */,
 				A8546B8F25BAA0A50008507B /* SeatingTableController.swift in Sources */,
 				A885879D25B83B69005729A8 /* AddButtonCell.swift in Sources */,
@@ -1633,6 +1655,7 @@
 				A85557DA25C0103D00C91638 /* SingleGuestController.swift in Sources */,
 				A85DD71225B985D0007237FE /* BudgetController.swift in Sources */,
 				BF8B7D7425EF4BA100779721 /* AllVendorCollectionViewCell.swift in Sources */,
+				1EBC78822684DDC000733E5C /* SideMenuController.swift in Sources */,
 				A862633425C19BAC001ECA52 /* SendMessageController.swift in Sources */,
 				A85557D625BFFCAD00C91638 /* MyWishListCell.swift in Sources */,
 				A87EF4BC25AEAA3A0032A0EA /* AppDelegate.swift in Sources */,
@@ -1665,6 +1688,7 @@
 				BF7F606E261F409A00B18224 /* BlogDetailModel.swift in Sources */,
 				BF538D8625F3A2D600F5585C /* BlogList.swift in Sources */,
 				A85877DB25BE7F58007E6A8A /* GuestListController.swift in Sources */,
+				1EBC78862684F70E00733E5C /* SideMenuCell.swift in Sources */,
 				BF510DCF25E6210F00B28038 /* WeddingGallery.swift in Sources */,
 				A8546B9225BAA12C0008507B /* SeatingTableCell.swift in Sources */,
 				A85557DE25C0107300C91638 /* HouseholdGuestController.swift in Sources */,

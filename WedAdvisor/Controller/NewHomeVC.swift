@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     func wishList(value: Bool) {
@@ -25,7 +26,6 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
             let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC
             vc?.vendorType = id
             self.navigationController?.pushViewController(vc!, animated: true)
-
         } else if index == 6 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "BlogDetailController") as? BlogDetailController
             vc?.id = id
@@ -33,9 +33,9 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
             self.navigationController?.pushViewController(vc!, animated: true)
         } else if index == 4 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC
-                       vc?.vendorType = id
+            vc?.vendorType = id
             vc?.checkforLocation =  true
-                       self.navigationController?.pushViewController(vc!, animated: true)
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
         
     }
@@ -69,7 +69,7 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     private let popularCategoriesIdentifier: String = "popularCategories"
     private let weddingIdentifier: String = "weddingTipsCell"
     private let testimonialIdenitifier: String = "testimonialDashboardCell"
-    
+    private var sideMenu: SideMenuNavigationController!
     //MARK:- NewVariables
     var dashboardArray = [HomeDetail?]()
     var bannerData = [HomeBanner]()
@@ -77,17 +77,26 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNibs()
-
+        registerNibs()
+        addSideMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // if checkfromwish == true{
            arrTitle = []
             homeData()
-            //tblHome.rowHeight = UITableView.automaticDimension
-        //}
+    }
+    
+    
+    fileprivate func addSideMenu() {
+        let sideMenuController = SideMenuController()
+        sideMenuController.delegate = self
+        sideMenu = SideMenuNavigationController(rootViewController: sideMenuController)
+        sideMenu.enableSwipeToDismissGesture = true
+        sideMenu.leftSide = true
+        sideMenu.presentationStyle = .menuSlideIn
+        sideMenu.menuWidth = UIScreen.main.bounds.width * 0.7
+        sideMenu.navigationBar.isHidden = true
     }
     
     // MARK:- Register cell
@@ -103,16 +112,7 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     }
     
     @IBAction func btnMenu(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
-        vc.delegateMenu = self
-        let transition = CATransition()
-        transition.duration = 0.1
-        // transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        
-        self.present(vc, animated: true, completion: nil)
+        self.tabBarController?.present(sideMenu, animated: true, completion: nil)
     }
     
     
@@ -121,13 +121,6 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-//    @IBAction func locationBtnTapped(_ sender: Any) {
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LocationController") as? LocationController else { return }
-//        vc.arrPopularLoc = arrSendLoc
-//        vc.arrPopularLocNew = arrSendLoc
-//        present(vc, animated: true, completion: nil)
-////        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
-//    }
     
     @IBAction func changeLocation(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "LocationController") as? LocationController else { return }
@@ -144,7 +137,55 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     
 }
 
-extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDelegate, WeddingTipsDelegate, LocationDelegate {
+extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDelegate, WeddingTipsDelegate, LocationDelegate, SideMenuControllerDelegate {
+    
+    
+    func didSelectMenuOption(menu: SideMenuOptions) {
+        switch menu {
+        case .dashboard:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "CoupleDashboardController") as! CoupleDashboardController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .mywishlist:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "MyWishListController") as! MyWishListController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .todolist:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ToDoListViewController") as! ToDoListViewController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .budget:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "BudgetController") as! BudgetController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .guestlist:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "GuestListController") as! GuestListController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .seatingtable:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SeatingTableController") as! SeatingTableController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .myprofile:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SelectOptionsController") as! SelectOptionsController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .logout:
+            sideMenu.dismiss(animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "LogoutController") as! LogoutController
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        case .aboutus:
+            sideMenu.dismiss(animated: true, completion: nil)
+        case .ourteam:
+            sideMenu.dismiss(animated: true, completion: nil)
+        case .privacy:
+            sideMenu.dismiss(animated: true, completion: nil)
+        case .terms:
+            sideMenu.dismiss(animated: true, completion: nil)
+        case .none:
+            break
+        }
+    }
     
     func moreWeddingTips() {
         self.tabBarController?.selectedIndex = 4
@@ -160,7 +201,9 @@ extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDel
         if selected == 5 {
             self.tabBarController?.selectedIndex = 1
         } else {
-            print("this")
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC else { return }
+            vc.vendorType = dashboardArray[IndexPath.row - 1]?.vendor_type?[selected].id
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -171,11 +214,17 @@ extension NewHomeVC: PopularLocationDelegate, PopularCategoryDelegate, VendorDel
     }
     
     func weddingTipSelected(selected: Int, indexPath: IndexPath) {
-        print("")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "BlogDetailController") as? BlogDetailController else { return }
+        vc.id = dashboardArray[indexPath.row - 1]?.weddTipsNews?[selected].id
+        vc.checkfromHome = true
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
     func popularLocationSelected(selected: Int, indexPath: IndexPath) {
-        print("")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC else { return }
+        vc.vendorType = dashboardArray[indexPath.row - 1]?.location?[selected].location?.id
+        vc.checkforLocation =  true
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -201,9 +250,9 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
                     return returnPopularLocations(tableView, cellForRowAt: indexPath)
                 case 7:
                     return UITableViewCell()
-                case 5:
+                case 5: // wedding tips and news
                     return returnWeddingTipsCell(tableView, cellForRowAt: indexPath)
-                case 4:
+                case 4: // testimonials
                     return returnTestimonialsCells(tableView, cellForRowAt: indexPath)
                 default:
                     return UITableViewCell()

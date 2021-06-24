@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weddingTipsCell" rowHeight="251" id="KGk-i7-Jjw" customClass="WeddingTippsCell" customModule="WedAdvisor" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weddingTipsCell" rowHeight="251" id="KGk-i7-Jjw" customClass="WeddingTippsCell" customModule="WedAdvisor" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -25,13 +25,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Tips and news" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-8q-Trn">
-                        <rect key="frame" x="16" y="10" width="182" height="20"/>
+                        <rect key="frame" x="16" y="10" width="177.5" height="21"/>
                         <fontDescription key="fontDescription" name="ProductSans-Medium" family="Product Sans Medium" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-iR-Vzl">
-                        <rect key="frame" x="254" y="5" width="50" height="30"/>
+                        <rect key="frame" x="254" y="5" width="50" height="31"/>
                         <color key="backgroundColor" name="AppLightOrangeColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Baq-tr-TVv"/>
@@ -45,7 +45,7 @@
                         </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-iD-sC0">
-                        <rect key="frame" x="16" y="45" width="288" height="196"/>
+                        <rect key="frame" x="16" y="46" width="288" height="195"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="JZp-CJ-Weq">
                             <size key="itemSize" width="128" height="128"/>

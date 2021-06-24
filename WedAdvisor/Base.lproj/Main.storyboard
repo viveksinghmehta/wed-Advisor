@@ -15838,7 +15838,7 @@
         <image name="ic_uncheckCircle" width="11" height="11"/>
         <image name="ic_upload" width="16" height="16"/>
         <image name="ic_whitePlus" width="24.5" height="24.5"/>
-        <image name="ic_whiteSearch" width="24.5" height="25"/>
+        <image name="ic_whiteSearch" width="18.5" height="18.5"/>
         <image name="ic_whiteStar" width="10" height="9.5"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

@@ -28,14 +28,14 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-WM-Yq8">
                         <rect key="frame" x="4" y="4" width="144" height="188"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfa-HT-uyg">
-                        <rect key="frame" x="10" y="10" width="38.5" height="19.5"/>
-                        <fontDescription key="fontDescription" name="ProductSans-Medium" family="Product Sans Medium" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfa-HT-uyg">
+                        <rect key="frame" x="10" y="10" width="132" height="18.5"/>
+                        <fontDescription key="fontDescription" name="ProductSans-Medium" family="Product Sans Medium" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-oA-Sbg">
-                        <rect key="frame" x="10" y="34.5" width="33" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-oA-Sbg">
+                        <rect key="frame" x="10" y="33.5" width="132" height="17"/>
                         <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -49,9 +49,11 @@
                 <constraint firstAttribute="trailing" secondItem="QFC-WM-Yq8" secondAttribute="trailing" constant="4" id="d7U-iq-VJx"/>
                 <constraint firstItem="QFC-WM-Yq8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="n2y-uG-CjG"/>
                 <constraint firstItem="BgC-oA-Sbg" firstAttribute="leading" secondItem="Nfa-HT-uyg" secondAttribute="leading" id="oma-7E-diP"/>
+                <constraint firstAttribute="trailing" secondItem="BgC-oA-Sbg" secondAttribute="trailing" constant="10" id="pC8-8M-vwP"/>
                 <constraint firstAttribute="bottom" secondItem="QFC-WM-Yq8" secondAttribute="bottom" constant="4" id="rfd-z3-Y4D"/>
                 <constraint firstItem="BgC-oA-Sbg" firstAttribute="top" secondItem="Nfa-HT-uyg" secondAttribute="bottom" constant="5" id="sSb-4Z-LyO"/>
                 <constraint firstItem="Nfa-HT-uyg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="sY1-Qn-tDt"/>
+                <constraint firstAttribute="trailing" secondItem="Nfa-HT-uyg" secondAttribute="trailing" constant="10" id="xdA-sy-my3"/>
             </constraints>
             <size key="customSize" width="152" height="196"/>
             <connections>

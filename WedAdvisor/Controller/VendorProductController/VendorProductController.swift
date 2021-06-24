@@ -33,26 +33,27 @@ class VendorProductController: UIViewController {
     }
     
     // MARK:- Register cell
-    func registerNibs(){
+    func registerNibs() {
         vendorProductCollection.register(UINib.init(nibName: "VendorProductCell", bundle: nil), forCellWithReuseIdentifier: "VendorProductCell")
         
     }
     
-   @IBAction func backBtn(sender: UIButton){
+   @IBAction func backBtn(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 
     
-    @IBAction func searchBtnTapped(sender: UIButton){
+    @IBAction func searchBtnTapped(sender: UIButton) {
         
     }
     
     
 }
 
-extension VendorProductController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension VendorProductController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  8
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
