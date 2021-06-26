@@ -50,7 +50,7 @@ enum codingKeys: String, CodingKey{
 
 struct usermobileInfo: Codable {
     var id : Int?
-    var mobile : Int?
+    var mobile : String?
     var is_active : Int?
    
 enum codingKeys: String, CodingKey{
@@ -62,9 +62,9 @@ enum codingKeys: String, CodingKey{
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: codingKeys.self)
-        id = try? (values.decodeIfPresent(Int.self,forKey: .id))
-        mobile = try? (values.decodeIfPresent(Int.self,forKey: .mobile))
-        is_active = try? (values.decodeIfPresent(Int.self,forKey: .is_active))
+        id = try? (values.decodeIfPresent(Int.self, forKey: .id))
+        mobile = try? (values.decodeIfPresent(String.self, forKey: .mobile))
+        is_active = try? (values.decodeIfPresent(Int.self, forKey: .is_active))
 
 
     }

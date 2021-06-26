@@ -117,8 +117,10 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     
     
     @IBAction func btnProfile(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SelectOptionsController") as? SelectOptionsController
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let profile = NewProfileViewController()
+        self.tabBarController?.navigationController?.pushViewController(profile, animated: true)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SelectOptionsController") as? SelectOptionsController
+//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     
@@ -342,9 +344,9 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     
 }
-extension NewHomeVC{
-    func homeData()
-    {
+extension NewHomeVC {
+    
+    func homeData() {
         self.showActivityIndicator(uiView: self.view)
         APIManager.sharedInstance.Home(success: { [weak self] (homeData) in
             guard let weakself = self else { return }
@@ -358,8 +360,6 @@ extension NewHomeVC{
             weakself.tblHome.reloadData()
         }){ (error) in
             self.hideActivityIndicator(uiView: self.view)
-            
-            // SupportMethod.showAlertMessage(messageStr: "Try Again")
         }
         
     }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProductSans-Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="profilecell" rowHeight="355" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAh-Ga-zJz" customClass="RoundedView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="16" y="56" width="288" height="273"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfA-uY-gRC">
+                                <rect key="frame" x="89" y="-55" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="8hV-Ep-8gi"/>
+                                    <constraint firstAttribute="height" constant="110" id="bLS-Bi-uBJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-d0-exg">
+                                <rect key="frame" x="159" y="15.5" width="40" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="AppLightOrangeColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRg-62-Wxd">
+                                <rect key="frame" x="159" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xrp-hV-eoB"/>
+                                    <constraint firstAttribute="width" constant="40" id="lab-xk-Ju1"/>
+                                </constraints>
+                                <color key="tintColor" name="AppLightOrangeColor"/>
+                                <state key="normal">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeProfileAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a7r-Xy-nDs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyL-8e-C0M" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="12" y="116" width="264" height="41"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-uH-Qtw" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="12" y="182" width="264" height="41"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="bottom" secondItem="dfA-uY-gRC" secondAttribute="bottom" id="6Oj-wB-tco"/>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="trailing" secondItem="dfA-uY-gRC" secondAttribute="trailing" id="AE1-OJ-5Yj"/>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="trailing" secondItem="rhF-d0-exg" secondAttribute="trailing" id="BCP-Xw-bPf"/>
+                            <constraint firstAttribute="trailing" secondItem="H4f-uH-Qtw" secondAttribute="trailing" constant="12" id="Gn8-s0-lXS"/>
+                            <constraint firstAttribute="trailing" secondItem="jyL-8e-C0M" secondAttribute="trailing" constant="12" id="Hes-x1-hjq"/>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="leading" secondItem="rhF-d0-exg" secondAttribute="leading" id="Q8S-M2-uk7"/>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="top" secondItem="rhF-d0-exg" secondAttribute="top" id="V4S-tM-D5r"/>
+                            <constraint firstItem="dfA-uY-gRC" firstAttribute="centerY" secondItem="EAh-Ga-zJz" secondAttribute="top" id="Wpo-RV-CZo"/>
+                            <constraint firstItem="wRg-62-Wxd" firstAttribute="bottom" secondItem="rhF-d0-exg" secondAttribute="bottom" id="YhX-AS-nDo"/>
+                            <constraint firstAttribute="bottom" secondItem="H4f-uH-Qtw" secondAttribute="bottom" constant="50" id="lsT-AP-Mym"/>
+                            <constraint firstItem="dfA-uY-gRC" firstAttribute="centerX" secondItem="EAh-Ga-zJz" secondAttribute="centerX" id="oXt-p3-cwe"/>
+                            <constraint firstItem="jyL-8e-C0M" firstAttribute="centerY" secondItem="EAh-Ga-zJz" secondAttribute="centerY" id="wKr-hv-Uoq"/>
+                            <constraint firstItem="jyL-8e-C0M" firstAttribute="leading" secondItem="EAh-Ga-zJz" secondAttribute="leading" constant="12" id="xZY-aU-SiL"/>
+                            <constraint firstItem="H4f-uH-Qtw" firstAttribute="leading" secondItem="EAh-Ga-zJz" secondAttribute="leading" constant="12" id="xrc-bb-nuX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="EAh-Ga-zJz" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-15" id="1Qe-WN-IOu"/>
+                    <constraint firstItem="EAh-Ga-zJz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="DRj-Qa-hvA"/>
+                    <constraint firstItem="EAh-Ga-zJz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="45" id="ly9-4R-AXg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="EAh-Ga-zJz" secondAttribute="trailing" id="m2B-ju-giV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backContentView" destination="EAh-Ga-zJz" id="UkK-XK-IYR"/>
+                <outlet property="editImage" destination="rhF-d0-exg" id="6vb-Tc-Gnt"/>
+                <outlet property="emailTF" destination="H4f-uH-Qtw" id="UXh-dL-GPA"/>
+                <outlet property="nameTF" destination="jyL-8e-C0M" id="33c-oi-maV"/>
+                <outlet property="profileImageView" destination="dfA-uY-gRC" id="IZc-wd-Bay"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="234.70982142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="H4f-uH-Qtw">
+            <size key="intrinsicContentSize" width="264" height="41.921671875000001"/>
+        </designable>
+        <designable name="jyL-8e-C0M">
+            <size key="intrinsicContentSize" width="264" height="41.921671875000001"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AppLightOrangeColor">
+            <color red="1" green="0.6940000057220459" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

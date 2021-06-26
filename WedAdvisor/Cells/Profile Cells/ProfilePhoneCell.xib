@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProductSans-Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="phonecell" rowHeight="292" id="KGk-i7-Jjw" customClass="ProfilePhoneCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doK-DW-kHo" customClass="RoundedView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="16" y="11" width="288" height="270"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-oL-4Dk">
+                                <rect key="frame" x="101.5" y="225" width="85" height="35"/>
+                                <color key="backgroundColor" name="AppLightOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="16O-3P-VMw"/>
+                                    <constraint firstAttribute="width" constant="85" id="9oa-II-3hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="16"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPhone:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WXb-Yo-JN2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-ve-lXR" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="176" width="248" height="34"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Phone No."/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-LY-tmF">
+                                <rect key="frame" x="71.5" y="135" width="145.5" height="21"/>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-7K-gUA" customClass="ExpandingTableView" customModule="WedAdvisor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="10" width="248" height="105"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vl2-ve-lXR" firstAttribute="leading" secondItem="doK-DW-kHo" secondAttribute="leading" constant="20" id="8A8-B3-2fH"/>
+                            <constraint firstAttribute="bottom" secondItem="kHY-oL-4Dk" secondAttribute="bottom" constant="10" id="H1E-Pc-kO7"/>
+                            <constraint firstItem="kHY-oL-4Dk" firstAttribute="top" secondItem="vl2-ve-lXR" secondAttribute="bottom" constant="15" id="Jb6-3A-Mx2"/>
+                            <constraint firstItem="0cV-LY-tmF" firstAttribute="centerX" secondItem="doK-DW-kHo" secondAttribute="centerX" id="SgH-qz-agS"/>
+                            <constraint firstItem="vl2-ve-lXR" firstAttribute="top" secondItem="0cV-LY-tmF" secondAttribute="bottom" constant="20" id="WDc-w4-6TK"/>
+                            <constraint firstItem="1bF-7K-gUA" firstAttribute="leading" secondItem="doK-DW-kHo" secondAttribute="leading" constant="20" id="gxV-4W-96w"/>
+                            <constraint firstAttribute="trailing" secondItem="1bF-7K-gUA" secondAttribute="trailing" constant="20" id="qH5-6f-IK6"/>
+                            <constraint firstAttribute="trailing" secondItem="vl2-ve-lXR" secondAttribute="trailing" constant="20" id="rCg-Q5-Pgw"/>
+                            <constraint firstItem="vl2-ve-lXR" firstAttribute="centerX" secondItem="doK-DW-kHo" secondAttribute="centerX" id="upt-Ys-bgU"/>
+                            <constraint firstItem="1bF-7K-gUA" firstAttribute="top" secondItem="doK-DW-kHo" secondAttribute="top" constant="10" id="veI-mL-dVK"/>
+                            <constraint firstItem="0cV-LY-tmF" firstAttribute="top" secondItem="1bF-7K-gUA" secondAttribute="bottom" constant="20" id="yps-8Z-7oL"/>
+                            <constraint firstItem="kHY-oL-4Dk" firstAttribute="centerX" secondItem="doK-DW-kHo" secondAttribute="centerX" id="z7p-e2-Sy6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="doK-DW-kHo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8d3-8h-br1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="doK-DW-kHo" secondAttribute="bottom" id="BL6-Z5-oHS"/>
+                    <constraint firstItem="doK-DW-kHo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="O1R-L6-51Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="doK-DW-kHo" secondAttribute="trailing" id="gxg-tp-WeB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="phoneTF" destination="vl2-ve-lXR" id="2TT-L2-A08"/>
+                <outlet property="phoneTableView" destination="1bF-7K-gUA" id="DcT-fA-Iy7"/>
+                <outlet property="submitButton" destination="kHY-oL-4Dk" id="YEb-Dk-Elf"/>
+            </connections>
+            <point key="canvasLocation" x="-17.39130434782609" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="vl2-ve-lXR">
+            <size key="intrinsicContentSize" width="99.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="AppLightOrangeColor">
+            <color red="1" green="0.6940000057220459" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

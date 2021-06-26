@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhoneVC: UIViewController, dismiss{
+class PhoneVC: UIViewController, OTPDismiss {
     func dismissPop() {
         profileListData()
     }
@@ -68,7 +68,7 @@ extension PhoneVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneCell", for: indexPath) as! PhoneCell
         let phone = arrPhone?[indexPath.row]
-        cell.lblPhone.text = "\(phone?.mobile ?? 1)"
+        cell.lblPhone.text = phone?.mobile
         cell.removeClosure = {
             self.idPhone = phone?.id
             self.deletePhone()
@@ -106,7 +106,7 @@ extension PhoneVC{
             print(todoadd)
             if todoadd.status == 200{
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtpPopUp") as? OtpPopUp
-                vc?.delegatedismiss = self
+//                vc?.delegatedismiss = self
                 vc?.selector = todoadd.selector
                 vc?.phone =  self.txtPhone.text
                 self.navigationController?.present(vc!, animated: true, completion: nil)

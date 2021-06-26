@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E111DC026861814004D1780 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E111DBE26861814004D1780 /* NewProfileViewController.swift */; };
+		1E111DC126861814004D1780 /* NewProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E111DBF26861814004D1780 /* NewProfileViewController.xib */; };
+		1E17A85526864DCD0039A52E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A85326864DCD0039A52E /* ProfileTableViewCell.swift */; };
+		1E17A85626864DCD0039A52E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E17A85426864DCD0039A52E /* ProfileTableViewCell.xib */; };
+		1E17A858268661240039A52E /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A857268661240039A52E /* RoundedView.swift */; };
 		1E2B900B268376C900ECEC45 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B9009268376C900ECEC45 /* CategoryCell.swift */; };
 		1E2B900C268376C900ECEC45 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B900A268376C900ECEC45 /* CategoryCell.xib */; };
 		1E2B900F26837CAD00ECEC45 /* PopularLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B900D26837CAD00ECEC45 /* PopularLocationCell.swift */; };
@@ -51,6 +56,14 @@
 		1EC38E6326824C0900B46217 /* ExpandingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E6226824C0900B46217 /* ExpandingTableView.swift */; };
 		1EC38E662682574800B46217 /* PopularCategoriesDashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */; };
 		1EC38E672682574800B46217 /* PopularCategoriesDashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */; };
+		1EDF7E872686FE3600B6E865 /* ProfileSocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF7E852686FE3600B6E865 /* ProfileSocialCell.swift */; };
+		1EDF7E882686FE3600B6E865 /* ProfileSocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF7E862686FE3600B6E865 /* ProfileSocialCell.xib */; };
+		1EDF7E8B268710EC00B6E865 /* PasswordChangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF7E89268710EC00B6E865 /* PasswordChangeCell.swift */; };
+		1EDF7E8C268710EC00B6E865 /* PasswordChangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF7E8A268710EC00B6E865 /* PasswordChangeCell.xib */; };
+		1EDF7E92268719DB00B6E865 /* ProfilePhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF7E90268719DB00B6E865 /* ProfilePhoneCell.swift */; };
+		1EDF7E93268719DB00B6E865 /* ProfilePhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF7E91268719DB00B6E865 /* ProfilePhoneCell.xib */; };
+		1EDF7E9626871E5500B6E865 /* AddedPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF7E9426871E5400B6E865 /* AddedPhoneCell.swift */; };
+		1EDF7E9726871E5500B6E865 /* AddedPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF7E9526871E5400B6E865 /* AddedPhoneCell.xib */; };
 		A805B32825B6EAE700856400 /* DeleteAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805B32725B6EAE700856400 /* DeleteAccountController.swift */; };
 		A84387D625BAEE4E00C7A553 /* RealWeddingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84387D525BAEE4E00C7A553 /* RealWeddingController.swift */; };
 		A84387D825BAF9E600C7A553 /* RealWeddingUploadGallaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84387D725BAF9E600C7A553 /* RealWeddingUploadGallaryCell.swift */; };
@@ -244,6 +257,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E111DBE26861814004D1780 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		1E111DBF26861814004D1780 /* NewProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewProfileViewController.xib; sourceTree = "<group>"; };
+		1E17A85326864DCD0039A52E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		1E17A85426864DCD0039A52E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		1E17A857268661240039A52E /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		1E2B9009268376C900ECEC45 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1E2B900A268376C900ECEC45 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		1E2B900D26837CAD00ECEC45 /* PopularLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularLocationCell.swift; sourceTree = "<group>"; };
@@ -288,6 +306,14 @@
 		1EC38E6226824C0900B46217 /* ExpandingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTableView.swift; sourceTree = "<group>"; };
 		1EC38E642682574800B46217 /* PopularCategoriesDashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCategoriesDashboardCell.swift; sourceTree = "<group>"; };
 		1EC38E652682574800B46217 /* PopularCategoriesDashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCategoriesDashboardCell.xib; sourceTree = "<group>"; };
+		1EDF7E852686FE3600B6E865 /* ProfileSocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSocialCell.swift; sourceTree = "<group>"; };
+		1EDF7E862686FE3600B6E865 /* ProfileSocialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSocialCell.xib; sourceTree = "<group>"; };
+		1EDF7E89268710EC00B6E865 /* PasswordChangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeCell.swift; sourceTree = "<group>"; };
+		1EDF7E8A268710EC00B6E865 /* PasswordChangeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordChangeCell.xib; sourceTree = "<group>"; };
+		1EDF7E90268719DB00B6E865 /* ProfilePhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhoneCell.swift; sourceTree = "<group>"; };
+		1EDF7E91268719DB00B6E865 /* ProfilePhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhoneCell.xib; sourceTree = "<group>"; };
+		1EDF7E9426871E5400B6E865 /* AddedPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedPhoneCell.swift; sourceTree = "<group>"; };
+		1EDF7E9526871E5400B6E865 /* AddedPhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddedPhoneCell.xib; sourceTree = "<group>"; };
 		501DE8CD603E88908C610459 /* Pods_WedAdvisor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedAdvisor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F36FB052EDE80E02E29F72 /* Pods-WedAdvisor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedAdvisor.debug.xcconfig"; path = "Target Support Files/Pods-WedAdvisor/Pods-WedAdvisor.debug.xcconfig"; sourceTree = "<group>"; };
 		73EFBBEE0A836B3BFDC8AF29 /* Pods-WedAdvisor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedAdvisor.release.xcconfig"; path = "Target Support Files/Pods-WedAdvisor/Pods-WedAdvisor.release.xcconfig"; sourceTree = "<group>"; };
@@ -518,6 +544,43 @@
 		1E702C6F2680E94C008B468C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1EDF7E8D2687196F00B6E865 /* Dashboard Cells */,
+				1EDF7E8E2687198D00B6E865 /* SideMenu Cells */,
+				1EDF7E8F268719A300B6E865 /* Profile Cells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1EA8AF10267B9F820001542A /* New Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EBC78812684DDC000733E5C /* SideMenuController.xib */,
+				1EA8AF17267BA1AD0001542A /* EditTODOController.xib */,
+				1EA8AF13267BA19B0001542A /* CreateTODOController.xib */,
+				1EAB1531267F9C2300963612 /* SplashController.xib */,
+				1EAB152D267F9C1000963612 /* OnBoardingViewController.xib */,
+				1E111DBF26861814004D1780 /* NewProfileViewController.xib */,
+			);
+			path = "New Views";
+			sourceTree = "<group>";
+		};
+		1EA8AF11267B9F9A0001542A /* New Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EA8AF12267BA19B0001542A /* CreateTODOController.swift */,
+				1EA8AF16267BA1AD0001542A /* EditTODOController.swift */,
+				1EAB1530267F9C2300963612 /* SplashController.swift */,
+				1EAB152C267F9C1000963612 /* OnBoardingViewController.swift */,
+				1EAB1534267FB28200963612 /* TabBarController.swift */,
+				1EBC78802684DDC000733E5C /* SideMenuController.swift */,
+				1E111DBE26861814004D1780 /* NewProfileViewController.swift */,
+			);
+			path = "New Controllers";
+			sourceTree = "<group>";
+		};
+		1EDF7E8D2687196F00B6E865 /* Dashboard Cells */ = {
+			isa = PBXGroup;
+			children = (
 				1E702C702680E997008B468C /* VendorsCollectionCell.swift */,
 				1E702C712680E997008B468C /* VendorsCollectionCell.xib */,
 				1EC38E5A2682363D00B46217 /* PopularLocationsDashboardCell.swift */,
@@ -532,37 +595,36 @@
 				1E2B9012268383F500ECEC45 /* WeddingTippsCell.xib */,
 				1E3D7C1C2683A1E900828A59 /* TestimonialDashboardCell.swift */,
 				1E3D7C1D2683A1E900828A59 /* TestimonialDashboardCell.xib */,
+			);
+			path = "Dashboard Cells";
+			sourceTree = "<group>";
+		};
+		1EDF7E8E2687198D00B6E865 /* SideMenu Cells */ = {
+			isa = PBXGroup;
+			children = (
 				1EBC78842684F70E00733E5C /* SideMenuCell.swift */,
 				1EBC78852684F70E00733E5C /* SideMenuCell.xib */,
 				1EBC78882684F86800733E5C /* SeperatorCell.swift */,
 				1EBC78892684F86800733E5C /* SeperatorCell.xib */,
 			);
-			path = Cells;
+			path = "SideMenu Cells";
 			sourceTree = "<group>";
 		};
-		1EA8AF10267B9F820001542A /* New Views */ = {
+		1EDF7E8F268719A300B6E865 /* Profile Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1EBC78812684DDC000733E5C /* SideMenuController.xib */,
-				1EA8AF17267BA1AD0001542A /* EditTODOController.xib */,
-				1EA8AF13267BA19B0001542A /* CreateTODOController.xib */,
-				1EAB1531267F9C2300963612 /* SplashController.xib */,
-				1EAB152D267F9C1000963612 /* OnBoardingViewController.xib */,
+				1E17A85326864DCD0039A52E /* ProfileTableViewCell.swift */,
+				1E17A85426864DCD0039A52E /* ProfileTableViewCell.xib */,
+				1EDF7E852686FE3600B6E865 /* ProfileSocialCell.swift */,
+				1EDF7E89268710EC00B6E865 /* PasswordChangeCell.swift */,
+				1EDF7E8A268710EC00B6E865 /* PasswordChangeCell.xib */,
+				1EDF7E862686FE3600B6E865 /* ProfileSocialCell.xib */,
+				1EDF7E90268719DB00B6E865 /* ProfilePhoneCell.swift */,
+				1EDF7E9426871E5400B6E865 /* AddedPhoneCell.swift */,
+				1EDF7E9526871E5400B6E865 /* AddedPhoneCell.xib */,
+				1EDF7E91268719DB00B6E865 /* ProfilePhoneCell.xib */,
 			);
-			path = "New Views";
-			sourceTree = "<group>";
-		};
-		1EA8AF11267B9F9A0001542A /* New Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1EA8AF12267BA19B0001542A /* CreateTODOController.swift */,
-				1EA8AF16267BA1AD0001542A /* EditTODOController.swift */,
-				1EAB1530267F9C2300963612 /* SplashController.swift */,
-				1EAB152C267F9C1000963612 /* OnBoardingViewController.swift */,
-				1EAB1534267FB28200963612 /* TabBarController.swift */,
-				1EBC78802684DDC000733E5C /* SideMenuController.swift */,
-			);
-			path = "New Controllers";
+			path = "Profile Cells";
 			sourceTree = "<group>";
 		};
 		4AB28809557A2C950485D9F6 /* Pods */ = {
@@ -919,6 +981,7 @@
 				1E974A252677C2CE005F8949 /* Helper.swift */,
 				1EAB152A267F8E8900963612 /* Defaults + Extension.swift */,
 				1EC38E6226824C0900B46217 /* ExpandingTableView.swift */,
+				1E17A857268661240039A52E /* RoundedView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1421,11 +1484,13 @@
 				BF7C865825FC9079009835F3 /* FilterListingCell.xib in Resources */,
 				1E702C672680E6BA008B468C /* ProductSans-LightItalic.ttf in Resources */,
 				BF56508725FF638F0058B1B3 /* VendorOptionSelectionCell.xib in Resources */,
+				1E17A85626864DCD0039A52E /* ProfileTableViewCell.xib in Resources */,
 				A87EF4CB25AEAA3B0032A0EA /* LaunchScreen.storyboard in Resources */,
 				1E702C632680E6BA008B468C /* ProductSans-Bold.ttf in Resources */,
 				A85877E525BE7FF1007E6A8A /* CoupleGuestListCell.xib in Resources */,
 				1E2B901026837CAD00ECEC45 /* PopularLocationCell.xib in Resources */,
 				BFEF6EE526188B1A001756D2 /* CustomFooterView.xib in Resources */,
+				1E111DC126861814004D1780 /* NewProfileViewController.xib in Resources */,
 				A8A675A425D4270C003973C5 /* AboutCell.xib in Resources */,
 				A88587A225B84503005729A8 /* NewTaskCell.xib in Resources */,
 				A86399D825B052AC009DEA25 /* ReviewCell.xib in Resources */,
@@ -1445,6 +1510,7 @@
 				1EC38E5D2682363D00B46217 /* PopularLocationsDashboardCell.xib in Resources */,
 				1E3D7C1F2683A1E900828A59 /* TestimonialDashboardCell.xib in Resources */,
 				1E702C6D2680E6BA008B468C /* ProductSans-BoldItalic.ttf in Resources */,
+				1EDF7E9726871E5500B6E865 /* AddedPhoneCell.xib in Resources */,
 				1EAB1533267F9C2300963612 /* SplashController.xib in Resources */,
 				BF4D18612620148200791CCE /* BlogDetailCategory.xib in Resources */,
 				1E702C6E2680E6BA008B468C /* ProductSans-Medium.ttf in Resources */,
@@ -1455,10 +1521,12 @@
 				BFDA25C625E3D9220001790C /* WeddingAffairsCollectionCell.xib in Resources */,
 				BF475CDF25EA58CA0021DEF4 /* HomeDataTableCell.xib in Resources */,
 				A85DD71025B981D4007237FE /* BudgetCell.xib in Resources */,
+				1EDF7E882686FE3600B6E865 /* ProfileSocialCell.xib in Resources */,
 				1E702C732680E997008B468C /* VendorsCollectionCell.xib in Resources */,
 				A885879A25B82E5D005729A8 /* ManagerCell.xib in Resources */,
 				1E702C6C2680E6BA008B468C /* ProductSans-Regular.ttf in Resources */,
 				BF919F5625F1E7E1000F7B26 /* CellAdvertisements.xib in Resources */,
+				1EDF7E8C268710EC00B6E865 /* PasswordChangeCell.xib in Resources */,
 				BFAFD72425F8B6A9004483E4 /* AmenitiesCell.xib in Resources */,
 				1EBC78872684F70E00733E5C /* SideMenuCell.xib in Resources */,
 				1E702C692680E6BA008B468C /* ProductSans-MediumItalic.ttf in Resources */,
@@ -1467,6 +1535,7 @@
 				1E2B9014268383F500ECEC45 /* WeddingTippsCell.xib in Resources */,
 				BF475CE325EA59BB0021DEF4 /* VendorHomeCollectionCell.xib in Resources */,
 				BF7C865425FC9065009835F3 /* FilterCategoryCell.xib in Resources */,
+				1EDF7E93268719DB00B6E865 /* ProfilePhoneCell.xib in Resources */,
 				BF9B192725EBA12200495EA6 /* TestimonialCell.xib in Resources */,
 				1EA8AF19267BA1AD0001542A /* EditTODOController.xib in Resources */,
 				A853446D25B1C21E00683817 /* SetCollectionCell.xib in Resources */,
@@ -1540,7 +1609,9 @@
 			files = (
 				BF7C865325FC9065009835F3 /* FilterCategoryCell.swift in Sources */,
 				A85DD70925B9725D007237FE /* DashBoardController.swift in Sources */,
+				1EDF7E872686FE3600B6E865 /* ProfileSocialCell.swift in Sources */,
 				BF60B69D26045DFF00D225AE /* SignUpModel.swift in Sources */,
+				1E17A85526864DCD0039A52E /* ProfileTableViewCell.swift in Sources */,
 				A857FFD925B6CB640081B297 /* ToDoListViewController.swift in Sources */,
 				BF475CD125EA38440021DEF4 /* NewHomeTableCell.swift in Sources */,
 				A889FA9325B57EB70083E988 /* ChangePasswordController.swift in Sources */,
@@ -1624,6 +1695,7 @@
 				A889FA9725B580F70083E988 /* ProfileOverViewController.swift in Sources */,
 				BF7F6070261F4D8C00B18224 /* BlodCommentCellTableViewCell.swift in Sources */,
 				A853445B25B1C20700683817 /* ArrangeCategoryCell.swift in Sources */,
+				1EDF7E92268719DB00B6E865 /* ProfilePhoneCell.swift in Sources */,
 				A862632E25C16A0B001ECA52 /* PinterestLayoutDelegate.swift in Sources */,
 				A853446025B1C20700683817 /* NameCollectionCell.swift in Sources */,
 				BFDA25C025E3D7860001790C /* MasterVc.swift in Sources */,
@@ -1642,6 +1714,7 @@
 				A889FA8525B553360083E988 /* MyProfileController.swift in Sources */,
 				BF919F5525F1E7E1000F7B26 /* CellAdvertisements.swift in Sources */,
 				BF56508225FF601B0058B1B3 /* VendorOptionCell.swift in Sources */,
+				1EDF7E9626871E5500B6E865 /* AddedPhoneCell.swift in Sources */,
 				BF6AEDA9262B2D4E002258EC /* GuestListModel.swift in Sources */,
 				1EA8AF14267BA19B0001542A /* CreateTODOController.swift in Sources */,
 				1E2B900B268376C900ECEC45 /* CategoryCell.swift in Sources */,
@@ -1655,9 +1728,12 @@
 				A85557DA25C0103D00C91638 /* SingleGuestController.swift in Sources */,
 				A85DD71225B985D0007237FE /* BudgetController.swift in Sources */,
 				BF8B7D7425EF4BA100779721 /* AllVendorCollectionViewCell.swift in Sources */,
+				1E17A858268661240039A52E /* RoundedView.swift in Sources */,
 				1EBC78822684DDC000733E5C /* SideMenuController.swift in Sources */,
+				1E111DC026861814004D1780 /* NewProfileViewController.swift in Sources */,
 				A862633425C19BAC001ECA52 /* SendMessageController.swift in Sources */,
 				A85557D625BFFCAD00C91638 /* MyWishListCell.swift in Sources */,
+				1EDF7E8B268710EC00B6E865 /* PasswordChangeCell.swift in Sources */,
 				A87EF4BC25AEAA3A0032A0EA /* AppDelegate.swift in Sources */,
 				BF475CCF25EA382A0021DEF4 /* NewHomeVC.swift in Sources */,
 				BF475CE225EA59BB0021DEF4 /* VendorHomeCollectionCell.swift in Sources */,

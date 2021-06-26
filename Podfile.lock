@@ -25,6 +25,7 @@ PODS:
   - ImageSlideshow (1.9.1):
     - ImageSlideshow/Core (= 1.9.1)
   - ImageSlideshow/Core (1.9.1)
+  - IQKeyboardManagerSwift (6.5.6)
   - MaterialComponents (78.0.0):
     - MaterialComponents/ActionSheet (= 78.0.0)
     - MaterialComponents/ActivityIndicator (= 78.0.0)
@@ -559,6 +560,7 @@ DEPENDENCIES:
   - DropDown
   - EZYGradientView (from `https://github.com/Niphery/EZYGradientView`)
   - ImageSlideshow (~> 1.9.0)
+  - IQKeyboardManagerSwift
   - MaterialComponents (= 78.0.0)
   - Reachability
   - SDWebImage (~> 5.0)
@@ -577,6 +579,7 @@ SPEC REPOS:
     - DefaultsKit
     - DropDown
     - ImageSlideshow
+    - IQKeyboardManagerSwift
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -609,6 +612,7 @@ SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   EZYGradientView: f13e7a9e774b906c66d617fb04a13c8853ba25b4
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   MaterialComponents: f50582fcff415a2459e62a29310fb3ec70a70234
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
@@ -623,6 +627,6 @@ SPEC CHECKSUMS:
   TweeTextField: 47bf8e7f0433364a7f7e119c45e7f278ea50eb62
   YYCalendar: 1a6bbbd2190392edf9209da898b029ce4e5e734b
 
-PODFILE CHECKSUM: ed9cee75f62cbb3d0e71b9dd00d4979d8aed4d45
+PODFILE CHECKSUM: e938aab9e8eeeff550434c7f0a815dc4d159c384
 
 COCOAPODS: 1.10.1

@@ -25,5 +25,6 @@ pod 'BetterSegmentedControl', '~> 1.3'
 pod 'SkyFloatingLabelTextField'
 pod 'DefaultsKit'
 pod 'SideMenu'
+pod 'IQKeyboardManagerSwift'
 
 end

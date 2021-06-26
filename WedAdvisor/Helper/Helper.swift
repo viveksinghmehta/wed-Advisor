@@ -11,6 +11,14 @@ import Foundation
 
 final class Helper {
     
+    class func optionalIntToInt(value: Int?) -> Int {
+        if let value = value {
+            return value
+        } else {
+            return 0
+        }
+    }
+    
     class func optionalIntToString(value: Int?) -> String {
         if let value = value {
             return value.description
@@ -77,6 +85,16 @@ extension UIImageView {
         self.layer.borderColor = color.cgColor
         self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
+    }
+    
+}
+
+extension UIViewController {
+    
+    func showAlertWithOk(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

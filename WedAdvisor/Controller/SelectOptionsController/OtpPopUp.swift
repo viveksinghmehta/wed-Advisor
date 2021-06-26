@@ -6,7 +6,8 @@
 //
 
 import UIKit
-protocol dismiss {
+
+protocol OTPDismiss: NSObject {
     func dismissPop()
 }
 
@@ -26,7 +27,7 @@ class OtpPopUp: UIViewController {
     var selector: String?
     var otp : String?
     var phone: String?
-    var delegatedismiss : dismiss?
+    weak var delegate : OTPDismiss?
     
    
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ class OtpPopUp: UIViewController {
         viewThree.layer.cornerRadius = 5
         viewFour.layer.cornerRadius = 5
         btnSubmit.layer.cornerRadius = 10
-        viewPop.layer.cornerRadius = 10
+//        viewPop.layer.cornerRadius = 10
         setUp()
     }
     
@@ -51,12 +52,16 @@ class OtpPopUp: UIViewController {
         txtThree.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         txtFour.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
+    
     @IBAction func btnDismiss(_ sender: Any){
         dismiss(animated: true, completion: nil)
     }
+    
+    
     @IBAction func btnSubmit(_ sender: Any) {
       
     }
+    
     @IBAction func btnResend(_ sender: Any) {
         if validation(){
             addOtp()
@@ -66,9 +71,10 @@ class OtpPopUp: UIViewController {
 
 // MARK:- OTP
 extension OtpPopUp: UITextFieldDelegate{
-    @objc func textFieldDidChange(textField: UITextField){
+    
+    @objc func textFieldDidChange(textField: UITextField) {
         let text = textField.text
-        if (text?.utf16.count)! >= 1{
+        if (text?.utf16.count)! >= 1 {
             switch textField{
             case txtOne:
                 txtTwo.becomeFirstResponder()
@@ -83,7 +89,7 @@ extension OtpPopUp: UITextFieldDelegate{
             }
         }
         if  text?.count == 0 {
-            switch textField{
+            switch textField {
             case txtOne:
                 txtOne.becomeFirstResponder()
             case txtTwo:
@@ -96,7 +102,7 @@ extension OtpPopUp: UITextFieldDelegate{
                 break
             }
         }
-        else{
+        else {
             
         }
     }
@@ -112,20 +118,17 @@ extension OtpPopUp: UITextFieldDelegate{
     }
     
      //MARK:- VALIDATION
-     func validation() -> Bool{
-         if (txtOne.text == ""){
+     func validation() -> Bool {
+         if (txtOne.text == "") {
              alertShow(msg: "Please enter OTP")
              return false
-         }
-       else if (txtTwo.text == ""){
+         } else if (txtTwo.text == "") {
             alertShow(msg: "Please enter OTP")
             return false
-        }
-       else if (txtThree.text == ""){
+        } else if (txtThree.text == "") {
             alertShow(msg: "Please enter OTP")
             return false
-        }
-       else if (txtFour.text == ""){
+        } else if (txtFour.text == "") {
             alertShow(msg: "Please enter OTP")
             return false
         }
@@ -133,7 +136,7 @@ extension OtpPopUp: UITextFieldDelegate{
          return true
      }
     
-      func alertShow(msg : String){
+      func alertShow(msg : String) {
           // the alert view
     self.present(UIAlertController.alertWithTitle(title: "", message: msg , buttonTitle: "OK"), animated: true, completion: {
         self.navigationController?.popViewController(animated: true)
@@ -143,25 +146,26 @@ extension OtpPopUp: UITextFieldDelegate{
 }
 
 
-extension OtpPopUp{
-    func addOtp()
-    {
+extension OtpPopUp {
+    
+    func addOtp() {
         otp = "\(txtOne.text ?? "")\(txtTwo.text ?? "")\(txtThree.text ?? "")\(txtFour.text ?? "")"
         let dictparam = ["selector": selector ?? 0,
                          "otp": otp ?? 0] as [String:Any]
         self.showActivityIndicator(uiView: self.view)
-        APIManager.sharedInstance.phoneOtp(with: dictparam, success: { (todoadd) in
-            self.hideActivityIndicator(uiView: self.view)
+        APIManager.sharedInstance.phoneOtp(with: dictparam, success: { [weak self] (todoadd) in
+            guard let weakself = self else { return }
+            weakself.hideActivityIndicator(uiView: weakself.view)
             print(todoadd)
-            if todoadd.message != "Server Error"{
-                self.delegatedismiss?.dismissPop()
-                self.dismiss(animated: true, completion: nil)
+            if todoadd.message != "Server Error" {
+                weakself.delegate?.dismissPop()
+                weakself.dismiss(animated: true, completion: nil)
+            } else {
+                weakself.alertShow(msg: "Please enter Correct OTP")
             }
-            else{
-                self.alertShow(msg: "Please enter Correct OTP")
-            }
-        }){ (error) in
-            self.hideActivityIndicator(uiView: self.view)
+        }){ [weak self] (error) in
+            guard let weakself = self else { return }
+            weakself.hideActivityIndicator(uiView: weakself.view)
         }
     }
 }

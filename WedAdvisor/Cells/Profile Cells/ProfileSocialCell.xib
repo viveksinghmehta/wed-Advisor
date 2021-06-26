@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProductSans-Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="profilesocialcell" rowHeight="150" id="KGk-i7-Jjw" customClass="ProfileSocialCell" customModule="WedAdvisor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9d-Ki-Skl" customClass="RoundedView" customModule="WedAdvisor" customModuleProvider="target">
+                        <rect key="frame" x="16" y="15" width="288" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WedAdvisor Social Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-Cv-QK2">
+                                <rect key="frame" x="51" y="20" width="186.5" height="21"/>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L4w-cE-BOh">
+                                <rect key="frame" x="20" y="58" width="248" height="47"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-mV-Yyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="47"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="KyD-mE-8m1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="399-lb-4kT">
+                                        <rect key="frame" x="67" y="0.0" width="47" height="47"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="TMN-ec-DDY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="6By-DK-ZYg">
+                                        <rect key="frame" x="134" y="0.0" width="47" height="47"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="1Kh-eJ-c2Y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="2qY-LQ-qFO">
+                                        <rect key="frame" x="201" y="0.0" width="47" height="47"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="Tl2-4l-fU6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ORv-Cv-QK2" firstAttribute="top" secondItem="F9d-Ki-Skl" secondAttribute="top" constant="20" id="GCE-Jf-TJe"/>
+                            <constraint firstItem="ORv-Cv-QK2" firstAttribute="centerX" secondItem="F9d-Ki-Skl" secondAttribute="centerX" id="VTq-8Q-3X5"/>
+                            <constraint firstAttribute="bottom" secondItem="L4w-cE-BOh" secondAttribute="bottom" constant="15" id="bxJ-PW-1kc"/>
+                            <constraint firstItem="L4w-cE-BOh" firstAttribute="leading" secondItem="F9d-Ki-Skl" secondAttribute="leading" constant="20" id="q1C-fJ-eO4"/>
+                            <constraint firstAttribute="trailing" secondItem="L4w-cE-BOh" secondAttribute="trailing" constant="20" id="uet-oa-NC1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="F9d-Ki-Skl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="3eP-SG-6Zh"/>
+                    <constraint firstAttribute="trailing" secondItem="F9d-Ki-Skl" secondAttribute="trailing" constant="16" id="VxU-SH-KLo"/>
+                    <constraint firstAttribute="bottom" secondItem="F9d-Ki-Skl" secondAttribute="bottom" constant="15" id="mFn-MU-IVm"/>
+                    <constraint firstItem="F9d-Ki-Skl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="x2P-Yy-hZy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backContentView" destination="F9d-Ki-Skl" id="Fhm-2b-ZLm"/>
+                <outlet property="facebookImageView" destination="mYg-mV-Yyh" id="gUC-Tn-Lbc"/>
+                <outlet property="instagramImageView" destination="2qY-LQ-qFO" id="fY8-zL-SOl"/>
+                <outlet property="twitterImageView" destination="399-lb-4kT" id="XYq-tQ-hwc"/>
+                <outlet property="youtubeImageView" destination="6By-DK-ZYg" id="df3-8Q-UAY"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="126.5625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="facebook" width="128" height="128"/>
+        <image name="instagram" width="128" height="128"/>
+        <image name="twitter" width="128" height="128"/>
+        <image name="youtube" width="128" height="128"/>
+    </resources>
+</document>
