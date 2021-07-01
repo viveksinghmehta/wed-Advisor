@@ -7,25 +7,45 @@
 //
 
 import Foundation
+
+
 struct VendorFilter: Codable {
     var vendor_types : [HomeVendorType]?
     var venues: [HomeVendorType]?
-   var vendorsInfo : VendorInfo?
+    var vendorsInfo : VendorInfo?
+//    var amenities: [Amenity]?
     
-    
-    enum codingKeys: String, CodingKey{
+    enum codingKeys: String, CodingKey {
         case vendor_types = "vendor_types"
         case venues = "venues"
         case vendorsInfo = "vendorsInfo"
+        case amenties = "amenties"
     }
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: codingKeys.self)
-        vendor_types = try? (values.decodeIfPresent([HomeVendorType].self,forKey: .vendor_types))
-        venues = try? (values.decodeIfPresent([HomeVendorType].self,forKey: .venues))
-        vendorsInfo  = try? (values.decodeIfPresent(VendorInfo.self,forKey: .vendorsInfo))
+        vendor_types = try? (values.decodeIfPresent([HomeVendorType].self, forKey: .vendor_types))
+        venues = try? (values.decodeIfPresent([HomeVendorType].self, forKey: .venues))
+        vendorsInfo  = try? (values.decodeIfPresent(VendorInfo.self, forKey: .vendorsInfo))
+//        amenities = try? (values.decodeIfPresent([Amenity].self, forKey: .amenties))
     }
 }
+
+//struct Amenity: Codable {
+//    var id, vendorTypeID: Int?
+//    var amenitiesOption: String?
+//    var createdAt, updatedAt: String?
+//    var deletedAt: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id = "id"
+//        case vendorTypeID = "vendor_type_id"
+//        case amenitiesOption = "amenities_option"
+//        case createdAt = "created_at"
+//        case updatedAt = "updated_at"
+//        case deletedAt = "deleted_at"
+//    }
+//}
 
 
 struct VendorInfo: Codable {

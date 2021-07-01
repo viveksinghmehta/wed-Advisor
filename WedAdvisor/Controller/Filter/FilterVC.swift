@@ -42,7 +42,7 @@ class FilterVC: UIViewController {
         tblFilter.dataSource = self
         self.registerNibs()
         type = "Vendor Type"
-       vendorData()
+//       vendorData()
     }
      // MARK:- Register cell
     func registerNibs(){
@@ -70,7 +70,7 @@ class FilterVC: UIViewController {
        
 
 }
-extension FilterVC: UITableViewDelegate, UITableViewDataSource{
+extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tblCategory{
@@ -200,47 +200,47 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 extension FilterVC{
-    func vendorData()
-    {
-        let dictparam = ["id":vendorType ?? 1] as [String:Any]
-        
-        self.showActivityIndicator(uiView: self.view)
-        APIManager.sharedInstance.vendorFilter(with: dictparam, success: { (vendorData) in
-            self.hideActivityIndicator(uiView: self.view)
-            print(vendorData)
-            self.arrVendor = vendorData.vendor_types
-            self.arrlocation = vendorData.venues
-            self.arrVendorsData = vendorData.vendorsInfo?.data
-            
-            if let name = vendorData.vendor_types{
-                for i in name{
-                    self.arrVendorString.append(i.name ?? "")
-                }
-            }
-            
-            if let loc = vendorData.venues{
-                for i in loc{
-                    self.arrlocationstring.append(i.city ?? "")
-                    self.arrlocationIds.append(i.id ?? 0)
-
-                }
-            }
-            if let vendorInfo = vendorData.vendor_types{
-                for i in vendorInfo{
-                    self.arrVendorDataString?.append(i.name ?? "")
-                    self.arrVendorIds.append(i.id ?? 0)
-
-                }
-            }
-            print(self.arrVendorString)
-            print(self.arrlocationstring)
-            self.tblFilter.reloadData()
-            //self.vendorsCollView.reloadData()
-        }){ (error) in
-            self.hideActivityIndicator(uiView: self.view)
-            
-            // SupportMethod.showAlertMessage(messageStr: "Try Again")
-        }
-    }
+//    func vendorData()
+//    {
+//        let dictparam = ["id":vendorType ?? 1] as [String:Any]
+//
+//        self.showActivityIndicator(uiView: self.view)
+//        APIManager.sharedInstance.vendorFilter(with: dictparam, success: { (vendorData) in
+//            self.hideActivityIndicator(uiView: self.view)
+//            print(vendorData)
+//            self.arrVendor = vendorData.vendor_types
+//            self.arrlocation = vendorData.venues
+//            self.arrVendorsData = vendorData.vendorsInfo?.data
+//
+//            if let name = vendorData.vendor_types{
+//                for i in name{
+//                    self.arrVendorString.append(i.name ?? "")
+//                }
+//            }
+//
+//            if let loc = vendorData.venues{
+//                for i in loc{
+//                    self.arrlocationstring.append(i.city ?? "")
+//                    self.arrlocationIds.append(i.id ?? 0)
+//
+//                }
+//            }
+//            if let vendorInfo = vendorData.vendor_types{
+//                for i in vendorInfo{
+//                    self.arrVendorDataString?.append(i.name ?? "")
+//                    self.arrVendorIds.append(i.id ?? 0)
+//
+//                }
+//            }
+//            print(self.arrVendorString)
+//            print(self.arrlocationstring)
+//            self.tblFilter.reloadData()
+//            //self.vendorsCollView.reloadData()
+//        }){ (error) in
+//            self.hideActivityIndicator(uiView: self.view)
+//
+//            // SupportMethod.showAlertMessage(messageStr: "Try Again")
+//        }
+//    }
     
 }

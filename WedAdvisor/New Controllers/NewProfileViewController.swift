@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DefaultsKit
 import SDWebImage
 import BetterSegmentedControl
 
@@ -47,6 +48,7 @@ final class NewProfileViewController: UIViewController {
             guard let weakself = self else { return }
             weakself.hideActivityIndicator(uiView: weakself.view)
             weakself.profileModel = model
+            weakself.saveDetailsInDefault(model)
             weakself.profileTableView.reloadData()
         } failure: { [weak self] error in
             guard let weakself = self else { return }
@@ -54,6 +56,10 @@ final class NewProfileViewController: UIViewController {
             print(Helper.optionalStringToString(value: error?.msg))
         }
 
+    }
+    
+    fileprivate func saveDetailsInDefault(_ model: MyProfileModel) {
+        Defaults().set(model, for: .profile)
     }
     
     
@@ -140,6 +146,7 @@ extension NewProfileViewController: UIImagePickerControllerDelegate, UINavigatio
                 weakself.hideActivityIndicator(uiView: weakself.view)
                 if Helper.optionalIntToInt(value: model.status) == 200 {
                     weakself.showAlertWithOk(title: "Success", message: "Your profile pic is updated successfully")
+                    weakself.getProfile()
                 } else {
                     weakself.showAlertWithOk(title: "Error", message: "we encountered a problem with your request")
                 }

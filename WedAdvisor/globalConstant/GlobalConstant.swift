@@ -14,6 +14,7 @@ class GlobalConstantClass: NSObject {
     struct APIConstantNames {
         static let appDelegate = UIApplication.shared.delegate as! AppDelegate
         static let baseUrl = "https://wed-advisor.com"
+        static let filter = "https://wed-advisor.com/find-vendor"
         static let imageBaseURL = "https://wed-advisor.com/images/"
         static let vendorDetail = "/list-single/"
         static let filtervendor = "/find-vendor?vendor_type="
@@ -34,7 +35,7 @@ class GlobalConstantClass: NSObject {
         static let todiaddTask = "/api/couple-todolist"
         static let deleteTask = "/api/todolistdelete"
         static let editTask = "/api/edittodolist"
-        static let updateProfile = "/api/api-userprofileupdate"
+        static let updateProfile = "/api/userprofileupdate"
         static let addPhone = "/api/useraddnumber"
         static let otpPhone = "/api/userverifyotp"
         static let deletePhone = "/api/usermobiledeletedata"

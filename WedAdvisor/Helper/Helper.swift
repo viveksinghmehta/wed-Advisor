@@ -79,8 +79,8 @@ extension StringProtocol {
 
 extension UIImageView {
     
-    func makeRounded(cornerRadius: CGFloat, color: UIColor = .black) {
-        self.layer.borderWidth = 5
+    func makeRounded(cornerRadius: CGFloat, color: UIColor = .black, width: Int = 5) {
+        self.layer.borderWidth = CGFloat(width)
         self.layer.masksToBounds = false
         self.layer.borderColor = color.cgColor
         self.layer.cornerRadius = cornerRadius

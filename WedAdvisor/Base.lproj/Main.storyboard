@@ -15821,7 +15821,7 @@
         <image name="ic_plus" width="30.5" height="30.5"/>
         <image name="ic_productDetail" width="452" height="279"/>
         <image name="ic_profileImg" width="65" height="65"/>
-        <image name="ic_rightArrow" width="7" height="7"/>
+        <image name="ic_rightArrow" width="7.5" height="13.5"/>
         <image name="ic_search" width="28" height="28"/>
         <image name="ic_seatingTable" width="23" height="25"/>
         <image name="ic_share" width="16" height="16"/>
@@ -15832,7 +15832,7 @@
         <image name="ic_uncheckCircle" width="11" height="11"/>
         <image name="ic_upload" width="16" height="16"/>
         <image name="ic_whitePlus" width="24.5" height="24.5"/>
-        <image name="ic_whiteSearch" width="18.5" height="18.5"/>
+        <image name="ic_whiteSearch" width="24.5" height="25"/>
         <image name="ic_whiteStar" width="10" height="9.5"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
@@ -15849,7 +15849,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppLightOrangeColor">
-            <color red="1" green="0.6940000057220459" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.69019607843137254" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellBorderColor">
             <color red="0.88999998569488525" green="0.88999998569488525" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

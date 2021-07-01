@@ -18,4 +18,7 @@ extension DefaultsKey {
     /// false when app is launched for the first time, true when we don't have to show onboarding screen.
     static let firstTimeOver = Key<Bool>("firstTimeOver")
     
+    ///profile model in defaults
+    static let profile = Key<MyProfileModel>("profile")
+    
 }

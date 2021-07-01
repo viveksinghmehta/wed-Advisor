@@ -10,8 +10,8 @@ import Foundation
 struct NetworkError: Codable {
     
     var msg: String?
-    var status:Int?
-    var data:[ErrorData]?
+    var status: Int?
+    var data: [ErrorData]?
     
     enum codingKeys: String, CodingKey{
         case msg = "message"

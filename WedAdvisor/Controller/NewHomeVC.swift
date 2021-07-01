@@ -133,8 +133,10 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     }
     
     @IBAction func btnSearch(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SearchingVC") as? SearchingVC else { return }
-        present(vc, animated: true, completion: nil)
+        let filter = FilterController()
+        self.present(filter, animated: true, completion: nil)
+//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SearchingVC") as? SearchingVC else { return }
+//        present(vc, animated: true, completion: nil)
     }
     
 }

@@ -147,8 +147,18 @@ class APIManager {
         }
     }
     
+    
+    func filterVenders(with parameters: [String: Any], success: @escaping(VendorsFilterModel) -> Void, failure: @escaping(NetworkError?) -> Void) {
+        let url = GlobalConstantClass.APIConstantNames.filter
+        AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: getHeaderAfterLogin())
+            .responseJSON { response in
+                print("URL: ", response.request?.url as Any)
+                print("Status Code: ", response.response?.statusCode as Any)
+            }
+    }
+    
 // vendor Filter
-    func vendorFilter(with param: [String:Any], success: @escaping(VendorFilter) -> Void, failure: @escaping(NetworkError?) -> Void ){
+func vendorFilter(with param: [String:Any], success: @escaping(VendorsFilterModel) -> Void, failure: @escaping(NetworkError?) -> Void ){
         let id = param["id"]
         let num = param["number"]
         let url = "\( GlobalConstantClass.APIConstantNames.baseUrl)\(GlobalConstantClass.APIConstantNames.filtervendor)\(id ?? "")&page=\(num ?? 0)"
@@ -158,42 +168,42 @@ class APIManager {
             switch response.result {
             case .success:
                 if (response.response?.statusCode == 200) {
-                    do{
-                        let filter = try jsonDecoder.decode(VendorFilter.self, from: try! response.result.get())
+                    do {
+                        let filter = try jsonDecoder.decode(VendorsFilterModel.self, from: try! response.result.get())
                         success(filter)
-                    }catch{
+                    } catch {
                         print("Error while decoding \(error)")
-                        do{
+                        do {
                             let networkError = try jsonDecoder.decode(NetworkError.self, from: try! response.result.get())
                             failure(networkError)
-                        }catch{
+                        } catch {
                             print("Error while decoding \(error)")
                         }
                     }
                 }
                 if (response.response?.statusCode == 500) {
-                     do{
-                         let filter = try jsonDecoder.decode(VendorFilter.self, from: try! response.result.get())
+                     do {
+                         let filter = try jsonDecoder.decode(VendorsFilterModel.self, from: try! response.result.get())
                          success(filter)
-                     }catch{
+                     } catch {
                          print("Error while decoding \(error)")
-                         do{
+                         do {
                              let networkError = try jsonDecoder.decode(NetworkError.self, from: try! response.result.get())
                              failure(networkError)
-                         }catch{
+                         } catch {
                              print("Error while decoding \(error)")
                          }
                      }
                  }
             case .failure:
-                do{
+                do {
                     if let data = try? response.result.get(){
                         let networkError = try jsonDecoder.decode(NetworkError.self, from: data)
                         failure(networkError)
-                    }else{
+                    } else {
                         failure(nil)
                     }
-                }catch{
+                } catch {
                     print("Error while decoding \(error)")
                 }
             }

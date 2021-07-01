@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+import DefaultsKit
+
 
 enum SideMenuOptions {
     case dashboard
@@ -72,8 +74,25 @@ class SideMenuController: UIViewController {
         tableviewInit()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showUsersData()
+    }
+    
+    
+    fileprivate func showUsersData() {
+        if let profile = Defaults().get(for: .profile) {
+            nameLabel.text = Helper.optionalStringToString(value: profile.loggedUser?.name)
+            profileImageView.sd_setImage(with: URL(string: GlobalConstantClass.APIConstantNames.imageBaseURL  + Helper.optionalStringToString(value: profile.loggedUser?.profile_image)))
+        } else {
+            nameLabel.text = "User"
+        }
+    }
+    
+    
+    
     fileprivate func UIChanges() {
-        profileImageView.makeRounded(cornerRadius: ((UIScreen.main.bounds.height * 0.13) - 30) / 2, color: .white)
+        profileImageView.makeRounded(cornerRadius: ((UIScreen.main.bounds.height * 0.13) - 20) / 2, color: .white, width: 3)
     }
     
     
