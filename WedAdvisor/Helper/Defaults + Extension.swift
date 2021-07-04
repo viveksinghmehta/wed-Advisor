@@ -21,4 +21,6 @@ extension DefaultsKey {
     ///profile model in defaults
     static let profile = Key<MyProfileModel>("profile")
     
+    static let location = Key<HomeLocation>("location")
+    
 }

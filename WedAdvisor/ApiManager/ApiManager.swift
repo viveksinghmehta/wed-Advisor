@@ -148,14 +148,98 @@ class APIManager {
     }
     
     
-    func filterVenders(with parameters: [String: Any], success: @escaping(VendorsFilterModel) -> Void, failure: @escaping(NetworkError?) -> Void) {
-        let url = GlobalConstantClass.APIConstantNames.filter
+    func filterVenders(with parameters: [String: Any], amaneties: [Int] = [], success: @escaping(VendorsFilterModel) -> Void, failure: @escaping(NetworkError?) -> Void) {
+        var url = GlobalConstantClass.APIConstantNames.filter
+        if !amaneties.isEmpty {
+            url = GlobalConstantClass.APIConstantNames.filter + "?"
+            for value in amaneties {
+                if value == amaneties.last {
+                    url.append("customCheck[]=\(value)")
+                } else {
+                    url.append("customCheck[]=\(value)&")
+                }
+            }
+        }
         AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: getHeaderAfterLogin())
-            .responseJSON { response in
+            .responseData { response in
                 print("URL: ", response.request?.url as Any)
                 print("Status Code: ", response.response?.statusCode as Any)
+                print("Headers: ", response.response?.headers as Any)
+                if let requestData = response.value {
+                    print("Response Data : ", String(data: requestData, encoding: .utf8) ?? "No data")
+                    
+                    switch Helper.optionalIntToInt(value: response.response?.statusCode) {
+                    case 200:
+                        do {
+                            let filter = try JSONDecoder().decode(VendorsFilterModel.self, from: requestData)
+                            success(filter)
+                        } catch {
+                            print("Error while decoding \(error)")
+                            do {
+                                let networkError = try JSONDecoder().decode(NetworkError.self, from: requestData)
+                                failure(networkError)
+                            } catch {
+                                print("Error while decoding \(error)")
+                                failure(NetworkError(msg: "Please try again after some time."))
+                            }
+                        }
+                    case 500:
+                        do {
+                            let networkError = try JSONDecoder().decode(NetworkError.self, from: requestData)
+                            failure(networkError)
+                        } catch {
+                            failure(NetworkError(msg: "Please try again after some time."))
+                        }
+                    default:
+                        failure(NetworkError(msg: "Please try again after some time."))
+                    }
+                }
             }
     }
+    
+    
+    
+    func search(with param: [String : Any], success: @escaping(SearchModel) -> Void, failure: @escaping(NetworkError?) -> Void) {
+        let url = GlobalConstantClass.APIConstantNames.search
+        AF.request(url, method: .get, parameters: param, encoding: URLEncoding.default, headers: getHeaderAfterLogin())
+            .responseData { response in
+                print("URL: ", response.request?.url as Any)
+                print("Status Code: ", response.response?.statusCode as Any)
+                print("Headers: ", response.response?.headers as Any)
+                if let requestData = response.value {
+                    print("Response Data : ", String(data: requestData, encoding: .utf8) ?? "No data")
+                    
+                    switch Helper.optionalIntToInt(value: response.response?.statusCode) {
+                    case 200:
+                        do {
+                            let search = try JSONDecoder().decode(SearchModel.self, from: requestData)
+                            success(search)
+                        } catch {
+                            print("Error while decoding \(error)")
+                            do {
+                                let networkError = try JSONDecoder().decode(NetworkError.self, from: requestData)
+                                failure(networkError)
+                            } catch {
+                                print("Error while decoding \(error)")
+                                failure(NetworkError(msg: "Please try again after some time."))
+                            }
+                        }
+                    case 500:
+                        do {
+                            let networkError = try JSONDecoder().decode(NetworkError.self, from: requestData)
+                            failure(networkError)
+                        } catch {
+                            failure(NetworkError(msg: "Please try again after some time."))
+                        }
+                    default:
+                        failure(NetworkError(msg: "Please try again after some time."))
+                    }
+                }
+            }
+    }
+    
+    
+    
     
 // vendor Filter
 func vendorFilter(with param: [String:Any], success: @escaping(VendorsFilterModel) -> Void, failure: @escaping(NetworkError?) -> Void ){

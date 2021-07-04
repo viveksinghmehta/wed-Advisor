@@ -9,8 +9,9 @@
 import UIKit
 import DropDown
 import SDWebImage
+import DefaultsKit
 
-class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, getFilter {
+final class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, getFilter {
     
     func getFilter(vendor: Int, location: Int, rating: Int, clear: Bool) {
         if clear == true {
@@ -40,7 +41,6 @@ class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionVie
     var arrVendorString = [String]()
     var arrlocationstring = [String]()
     var arrRating = ["4 & above","3 & above","2 & above","1 & above"]
-    var vendorType : Int?
     var buttonIndex: Int?
     var arrVendorsData : [VendorData]?
     var arrVendorsDataComplete = [VendorData]()
@@ -62,6 +62,11 @@ class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionVie
     // New Vaules
     var vendorFilterData: VendorsFilterModel?
     var vendorsArray = [VendorInfoData]()
+    var vendorType : Int?
+    var locationID: Int?
+    var selectedRating: String = ""
+//    var amanities = [Int]()
+    var amanities: [Int] = []
     
     @IBOutlet weak var CollectionFilter: UICollectionView!
     
@@ -69,14 +74,19 @@ class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         //loadMore = 1
-        if checkforLocation == true {
-            vendorDataLocation()
-        } else {
-            vendorData()
-        }
+        checkForLocation()
+        vendorData()
         registerNibs()
     }
     
+    
+    fileprivate func checkForLocation() {
+        if locationID == nil {
+            if let location = Defaults().get(for: .location) {
+                locationID = Helper.optionalIntToInt(value: location.id)
+            }
+        }
+    }
     
     
     
@@ -100,9 +110,25 @@ class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionVie
     @IBAction func btnFilter(_ sender: UIButton) {
         let filter = FilterController()
         filter.vendors = vendorFilterData?.vendorTypes ?? []
-        filter.amneties = vendorFilterData?.amenities ?? []
         filter.locations = vendorFilterData?.venues ?? []
         filter.vendorID = vendorType
+        filter.locationID = locationID
+        if amanities.isEmpty {
+            filter.amneties = vendorFilterData?.amenities ?? []
+        } else {
+            var newAmenties: [Amenity] = []
+            vendorFilterData?.amenities?.forEach { amenity in
+                var temp = amenity
+                if amanities.filter({ $0 == Helper.optionalIntToInt(value: amenity.id) }).count > 0 {
+                    temp.isSelected = true
+                } else {
+                    temp.isSelected = false
+                }
+                newAmenties.append(temp)
+            }
+            filter.amneties = newAmenties
+        }
+        filter.delegate = self
         self.present(filter, animated: true, completion: nil)
     }
     
@@ -160,54 +186,34 @@ class VendorFilterVC: UIViewController, UICollectionViewDelegate,UICollectionVie
     
 }
 
-extension VendorFilterVC {
+extension VendorFilterVC: FilterDelegate {
     
-   fileprivate func vendorData() {
-    let dictparam: [String: Any] = ["id": vendorType ?? 1, "number": pageNo]
-    let param: [String: Any] = ["vender_type": vendorType ?? 0, "rating": "4"]
-    APIManager.sharedInstance.filterVenders(with: param) { model in
-        print("")
-    } failure: { error in
-        print("")
+    func filterSelected(locationID: Int?, vendorID: Int?, rating: String?, amenties: [Int]) {
+        self.locationID = locationID
+        self.vendorType = vendorID
+        self.selectedRating = Helper.optionalStringToString(value: rating)
+        self.amanities = amenties
+        vendorData()
     }
-
+    
+    
+    fileprivate func vendorData() {
         self.showActivityIndicator(uiView: self.view)
-        APIManager.sharedInstance.vendorFilter(with: dictparam, success: { [weak self] (model) in
+        var param: [String: Any] = ["vender_type": vendorType ?? 0]
+        if locationID != nil {
+            param["location"] = Helper.optionalIntToInt(value: locationID)
+        }
+        if !selectedRating.isEmpty {
+            param["ratings"] = selectedRating
+        }
+        APIManager.sharedInstance.filterVenders(with: param, amaneties: amanities) { [weak self] model in
             guard let weakself = self else { return }
             weakself.hideActivityIndicator(uiView: weakself.view)
             weakself.setData(model: model)
-//            // self.arrVendorsData = vendorData.vendorsInfo?.data
-//
-//            self.arrVendorsDataComplete.append(contentsOf: vendorData.vendorsInfo?.data ?? [])
-//            print(self.arrVendorsDataComplete)
-//            self.nextPage = vendorData.vendorsInfo?.next_page_url
-//            self.CollectionFilter.reloadData()
-//            if let data = self.arrVendorsData{
-//                for i in data{
-//                    self.arrPgingString.append(i.name ?? "")
-//                }
-//            }
-//
-//            print(self.arrVendorsData?.count)
-//            if let name = vendorData.vendor_types{
-//                for i in name{
-//                    self.arrVendorString.append(i.name ?? "")
-//                }
-//            }
-//
-//            if let loc = vendorData.venues{
-//                for i in loc{
-//                    self.arrlocationstring.append(i.city ?? "")
-//                }
-//            }
-//            if let vendorInfo = vendorData.vendorsInfo?.data{
-//                for i in vendorInfo{
-//                    self.arrVendorDataString?.append(i.name ?? "")
-//                }
-//            }
-        }) { [weak self] (error) in
+        } failure: { [weak self] error in
             guard let weakself = self else { return }
             weakself.hideActivityIndicator(uiView: weakself.view)
+            weakself.showAlertWithOk(title: "Error", message: Helper.optionalStringToString(value: error?.msg))
         }
     }
     
@@ -215,7 +221,11 @@ extension VendorFilterVC {
     fileprivate func setData(model: VendorsFilterModel) {
         vendorFilterData = model
         print(model)
-        vendorsArray.append(contentsOf: model.vendorsInfo?.data ?? [])
+        if pageNo == 1 {
+            vendorsArray = model.vendorsInfo?.data ?? []
+        } else {
+            vendorsArray.append(contentsOf: model.vendorsInfo?.data ?? [])
+        }
         CollectionFilter.reloadData()
     }
     
@@ -226,7 +236,6 @@ extension VendorFilterVC {
         self.showActivityIndicator(uiView: self.view)
         APIManager.sharedInstance.vendorFilterLocation(with: dictparam, success: { (vendorData) in
             self.hideActivityIndicator(uiView: self.view)
-            print(self.arrVendorsData?.count)
             self.arrVendor = vendorData.vendor_types
             self.arrlocation = vendorData.venues
             // self.arrVendorsData = vendorData.vendorsInfo?.data

@@ -9,6 +9,10 @@
 import UIKit
 import BetterSegmentedControl
 
+protocol FilterDelegate: NSObject {
+    func filterSelected(locationID: Int?, vendorID: Int?, rating: String?, amenties: [Int])
+}
+
 final class FilterController: UIViewController {
 
     enum FilterOptions {
@@ -32,6 +36,8 @@ final class FilterController: UIViewController {
     var locationID: Int?
     var vendorID: Int?
     var selectedRating: String?
+    
+    weak var delegate: FilterDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +79,8 @@ final class FilterController: UIViewController {
     }
     
     @IBAction func applyAction(_ sender: UIButton) {
+        let temp = amneties.map( { Helper.optionalIntToInt(value: $0.id) } )
+        delegate?.filterSelected(locationID: locationID, vendorID: vendorID, rating: selectedRating, amenties: temp)
         self.dismiss(animated: true, completion: nil)
     }
     

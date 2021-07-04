@@ -19,6 +19,12 @@ struct NetworkError: Codable {
         case data = "data"
     }
     
+    
+    init(msg: String) {
+        self.msg = msg
+    }
+    
+    
     init(from decoder: Decoder) throws {
         
         let values = try decoder.container(keyedBy: codingKeys.self)
@@ -28,6 +34,6 @@ struct NetworkError: Codable {
     }
 }
 
-struct ErrorData:Codable {
+struct ErrorData : Codable {
     
 }

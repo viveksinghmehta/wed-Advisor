@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import DefaultsKit
+
+
 
 protocol LocationDelegate: NSObject {
    func locationSelected(city: String)
@@ -64,11 +67,14 @@ extension LocationController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC
-//        let a = arrPopularLocNew?[indexPath.row]
-//        vc?.vendorType = a?.id
-//        vc?.checkforLocation =  true
-//        self.navigationController?.pushViewController(vc!, animated: true)
+        //        let vc = storyboard?.instantiateViewController(withIdentifier: "VendorFilterVC") as? VendorFilterVC
+        //        let a = arrPopularLocNew?[indexPath.row]
+        //        vc?.vendorType = a?.id
+        //        vc?.checkforLocation =  true
+        //        self.navigationController?.pushViewController(vc!, animated: true)
+        if let location = arrPopularLoc?[indexPath.row] {
+            Defaults().set(location, for: .location)
+        }
         delegate?.locationSelected(city: Helper.optionalStringToString(value: arrPopularLoc?[indexPath.row].city))
         dismiss(animated: true, completion: nil)
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SideMenu
+import DefaultsKit
 
 final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     func wishList(value: Bool) {
@@ -83,8 +84,15 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-           arrTitle = []
-            homeData()
+        setLocation()
+        homeData()
+    }
+    
+    
+    fileprivate func setLocation() {
+        if let location = Defaults().get(for: .location) {
+            self.chooseLocationLabel.text = Helper.optionalStringToString(value: location.city).capitalizingFirstLetter()
+        }
     }
     
     
@@ -133,10 +141,8 @@ final class NewHomeVC: UIViewController, selectMenu, nextVC, wishList {
     }
     
     @IBAction func btnSearch(_ sender: Any) {
-        let filter = FilterController()
-        self.present(filter, animated: true, completion: nil)
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SearchingVC") as? SearchingVC else { return }
-//        present(vc, animated: true, completion: nil)
+        let searchController = SearchController()
+        present(searchController, animated: true, completion: nil)
     }
     
 }

@@ -14,6 +14,7 @@ class GlobalConstantClass: NSObject {
     struct APIConstantNames {
         static let appDelegate = UIApplication.shared.delegate as! AppDelegate
         static let baseUrl = "https://wed-advisor.com"
+        static let search = "https://wed-advisor.com/headersearch"
         static let filter = "https://wed-advisor.com/find-vendor"
         static let imageBaseURL = "https://wed-advisor.com/images/"
         static let vendorDetail = "/list-single/"
